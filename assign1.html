@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scatter Plot and Histogram</title>
+    <script src="https://d3js.org/d3.v7.js"></script>
+
+
+
+</head>
+<body>
+<h1 id="header" ></h1>
+<pre id = p1>
+    In 2020, Montana has higher fatality rate per 100,000 population (19.71) than national average (11.78)
+    and the number is also higher compared to neighboring state such as Washington (7.28), Utah (8.49),
+    California (9.77), Nevada (10.10), Idaho (11.71), and Oregon (11.98) except Wyoming (21.81).  The most
+    dangerous time to drive is at night due to lack of street-lights and drinking and during winter season
+    due to harsh road conditions.
+</pre>
+<p id = p2></p>
+<br>
+<div id="bar1"></div>
+<br>
+<br>
+<br>
+<br>
+<div id="scatter1"></div>
+<br>
+<br>
+<br>
+<br>
+<div id="bar2"></div>
+<br>
+<br>
+<pre id = p3>
+    A little bit background, when I was researching for a car to buy after moving to Montana, I Googled
+    on the type and was told by several posts to buy a truck, the bigger the better, because people mostly
+    drive trucks and there are a lot of accidents caused by DUI, so by having a truck greatly increases
+    the survival rate if anyone got involved in a traffic accident.
+    Another factor is icy road condition during long winter time and it is more risky to drive than
+    spring/summer seasons. Therefore, I assumed night time and winter season are to be avoided due to
+    high risks of becoming one of the statistics. Based on the data from NHTSA, my assumptions were way-off.
+    Summer season have highest number of fatal crashes and day time is more risky to drive.
+</pre>
+<pre id = p4>
+
+    ***Data Source from NHTSA (National Highway Traffic Safety Administration)***
+       <a href=https://www-fars.nhtsa.dot.gov/States/StatesCrashesAndAllVictims.aspx target="_blank">https://www-fars.nhtsa.dot.gov/States/StatesCrashesAndAllVictims.aspx</a>
+
+</pre>
+
+<style>
+
+
+</style>
+
+
+<script>
+
+    var title1 = d3.select("#header")
+        .append("p")
+        .text("Hypotheses: ")
+        .attr("font-weight","80")
+        .style("font-size", "25px")
+        .style("font-family", "Calibri");
+
+    d3.select("#p1")
+        .style("font-size", "20px")
+        .style("font-family", "Calibri");
+
+    d3.select("#p3")
+        .style("font-size", "15px")
+        .style("font-family", "Calibri");
+
+    d3.select("#p4")
+        .style("font-size", "15px")
+        .style("font-family", "Calibri");
+
+
+//histo 1 starts --------------------------------------------------------------------------------------------------
+
+    databar1 = [{year: 2009, fatal_crash_numb: 198}, {year: 2010, fatal_crash_numb: 161}, {year: 2011, fatal_crash_numb: 187},
+        {year: 2012, fatal_crash_numb: 192}, {year: 2013, fatal_crash_numb: 203}, {year: 2014, fatal_crash_numb: 176},
+        {year: 2015, fatal_crash_numb: 204}, {year: 2016, fatal_crash_numb: 171}, {year: 2017, fatal_crash_numb: 169},
+        {year: 2018, fatal_crash_numb: 167}, {year: 2019, fatal_crash_numb: 166}, {year: 2020, fatal_crash_numb: 190},];
+
+    var margin = {top: 20, right: 20, bottom: 70, left: 80},
+        width = 800 - margin.left - margin.right,
+        height = 500 - margin.top - margin.bottom;
+
+
+
+    // append the svg object to the body of the page
+    // append a 'group' element to 'svg'
+    // moves the 'group' element to the top left margin
+    var svgb1 = d3.select("#bar1").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")");
+
+    // X axis
+    var xb1 = d3.scaleBand()
+        .range([ 0, width ])
+        .domain(databar1.map(function(d) { return d.year; }))
+        .padding(0.2);
+    svgb1.append("g")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(xb1))
+        .selectAll("text")
+        .attr("transform", "translate(-10,0)rotate(-45)")
+        .style("text-anchor", "end")
+        .style("font-size", "13px");
+
+    svgb1.append("text")
+        .attr("transform", "translate(" + (width / 2) + " ," + (height + margin.bottom-5) + ")")
+        .style("text-anchor", "middle")
+        .text("From 2009 to 2020")
+        .attr("font-weight","700")
+        .style("font-size", "18px")
+        .style("font-family", "Calibri")
+
+    // Add Y axis
+    var yb1 = d3.scaleLinear()
+        .domain([0, 230])
+        .range([ height, 0]);
+    svgb1.append("g")
+        .call(d3.axisLeft(yb1))
+        .style("font-size", "13px");
+
+    svgb1.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", -60)
+        .attr("x",0 - (height / 2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .text("Number of Fatal Crashes")
+        .attr("font-weight","700")
+        .style("font-size", "18px")
+        .style("font-family", "Calibri");
+
+    svgb1.append("text")
+        .attr("x", width/2)
+        .attr("y", 0)
+        .attr("text-anchor", "middle")
+        .style("font-size", "16px")
+        .text("Number of Fatal Crashes From 2009 to 2020")
+        .attr("font-weight","550")
+        .style("font-size", "20px")
+        .style("font-family", "century gothic");
+
+    svgb1.selectAll(".text")
+        .data(databar1)
+        .enter()
+        .append("text")
+        .attr("class","label")
+        .attr("x", (function(d) { return xb1(d.year)+10; }  ))
+        .attr("y", function(d) { return yb1(d.fatal_crash_numb) - 20; })
+        .attr("dy", ".75em")
+        .text(function(d, i) {
+            if (i == 11)
+            return d.fatal_crash_numb; })
+        .attr("font-weight","800")
+        .style("font-size", "18px")
+        .style("font-family", "Calibri");
+
+    svgb1.selectAll("mybar")
+        .data(databar1)
+        .enter()
+        .append("rect")
+        .attr("x", function(d) { return xb1(d.year); })
+        .attr("y", function(d) { return yb1(d.fatal_crash_numb); })
+        .attr("width", xb1.bandwidth())
+        .attr("height", function(d) { return height - yb1(d.fatal_crash_numb); })
+        .attr("fill", function(d, i) {
+            if (i == 11) return "#69b3a2"
+            else return "#B2BDC1"
+    })
+
+    // histo1 ends-----------------------------------------------------------------------------------------------------
+
+
+    // Scatter plot Start --------------------------------------------------------------------------------------------
+
+    datascatter = [{month: "Jan", fatal_crash_num: 8}, {month: "Feb", fatal_crash_num: 3}, {month: "Mar", fatal_crash_num: 13},
+        {month: "Apr", fatal_crash_num: 5}, {month: "May", fatal_crash_num: 15}, {month: "Jun", fatal_crash_num: 31},
+        {month: "Jul", fatal_crash_num: 21}, {month: "Aug", fatal_crash_num: 24}, {month: "Sep", fatal_crash_num: 17},
+        {month: "Oct", fatal_crash_num: 18}, {month: "Nov", fatal_crash_num: 20}, {month: "Dec", fatal_crash_num: 15},]
+
+    //var margin = {top: 20, right: 20, bottom: 70, left: 80},
+        //width = 800 - margin.left - margin.right,
+        //height = 500 - margin.top - margin.bottom;
+
+    // parse the date / time
+    var parseTime = d3.timeParse("%b");
+
+    // set the ranges
+    var x = d3.scaleTime().range([0, width]);
+    var y = d3.scaleLinear().range([height, 0]);
+
+    // define the line
+    var valueline = d3.line()
+       .x(function(d) { return x(d.month); })
+       .y(function(d) { return y(d.fatal_crash_num); });
+
+    // append the svg object to the body of the page
+    // appends a 'group' element to 'svg'
+    // moves the 'group' element to the top left margin
+    var svgsc = d3.select("#scatter1").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform",
+            "translate(" + margin.left + "," + margin.top+ ")");
+
+    // format the data
+    datascatter.forEach(function(d) {
+        d.month = parseTime(d.month);
+        d.fatal_crash_num = +d.fatal_crash_num;
+    });
+
+    // Scale the range of the data
+
+    x.domain(d3.extent(datascatter, function(d) { return d.month; }));
+    // y.domain([0, d3.max(datascatter, function(d) { return d.fatal_crash_num; })]);
+    y.domain([0, 40]);
+
+    // Add the valueline path. Lines on scatter plot
+    //svgsc.append("path")
+        //.data([datascatter])
+        //.attr("class", "line")
+        //.attr("d", valueline);
+
+
+    // Add the X Axis
+    svgsc.append("g")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(x).tickFormat(d3.timeFormat("%b")))
+        .style("font-size", "13px");
+
+    svgsc.append("text")
+        .attr("transform", "translate(" + (width / 2) + " ," + (height + margin.bottom-5) + ")")
+        .style("text-anchor", "middle")
+        .text("Month of 2020")
+        .attr("font-weight","700")
+        .style("font-size", "18px")
+        .style("font-family", "Calibri")
+
+    // Add the Y Axis
+    svgsc.append("g")
+        .attr("transform", "translate(0," + 0 + ")")
+        .call(d3.axisLeft(y))
+        .style("font-size", "13px");
+
+    svgsc.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", -60)
+        .attr("x",0 - (height / 2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .text("Number of Fatal Crashes")
+        .attr("font-weight","700")
+        .style("font-size", "18px")
+        .style("font-family", "Calibri");
+
+    svgsc.append("text")
+        .attr("x", width/2)
+        .attr("y", 0)
+        .attr("text-anchor", "middle")
+        .style("font-size", "16px")
+        .text("Number of Fatal Crashes Throughout 2020")
+        .attr("font-weight","550")
+        .style("font-size", "20px")
+        .style("font-family", "Century gothic");
+
+    // Add the scatterplot
+    svgsc.selectAll("dot")
+        .data(datascatter)
+        .enter().append("circle")
+        .attr("r", 5)
+        .attr("cx", function(d) { return x(d.month); })
+        .attr("cy", function(d) { return y(d.fatal_crash_num); })
+        .attr("fill", function (d,i) {
+            if (i == 5) return "Red"
+            else if (i == 6) return "orange"
+            else if (i == 7) return "orange"
+            else return "#B2BDC1"
+        });
+
+// Scatter plot ends---------------------------------------------------------------------------------------------
+
+//Histo 2 starts------------------------------------------------------
+
+    databar2 = [{condition: "Daylight with Normal Road", fatal_crash_numb1: 85}, {condition: "Daylight with Rainy/Snowy Road", fatal_crash_numb1: 14}
+        , {condition: "Dark with Normal Road", fatal_crash_numb1: 74}, {condition: "Dark with Rainy/Snow Road", fatal_crash_numb1: 5}, {condition: "Others", fatal_crash_numb1: 12}];
+
+
+    var svgb2 = d3.select("#bar2").append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom+90)
+        .append("g")
+        .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")");
+
+    // X axis
+    var xb2 = d3.scaleBand()
+        .range([ 0, width ])
+        .domain(databar2.map(function(d) { return d.condition; }))
+        .padding(0.2);
+    svgb2.append("g")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(xb2))
+        .selectAll("text")
+        .attr("transform", "translate(-10,0)rotate(-45)")
+        .style("text-anchor", "end")
+        .style("font-size", "13px");
+
+    svgb2.append("text")
+        .attr("transform", "translate(" + (width / 2) + " ," + (height + margin.bottom+90) + ")")
+        .style("text-anchor", "middle")
+        .text("Road Conditions")
+        .attr("font-weight","700")
+        .style("font-size", "18px")
+        .style("font-family", "Calibri")
+
+    // Add Y axis
+    var yb2 = d3.scaleLinear()
+        .domain([0, 100])
+        .range([ height, 0]);
+    svgb2.append("g")
+        .call(d3.axisLeft(yb2));
+
+    svgb2.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", -60)
+        .attr("x",0 - (height / 2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .text("Number of Fatal Crashes")
+        .attr("font-weight","700")
+        .style("font-size", "18px")
+        .style("font-family", "Calibri");
+
+    svgb2.append("text")
+        .attr("x", width/2)
+        .attr("y", 0)
+        .attr("text-anchor", "middle")
+        .style("font-size", "16px")
+        .text("Number of Fatal Crashes in Different Road Conditions")
+        .attr("font-weight","550")
+        .style("font-size", "20px")
+        .style("font-family", "century gothic");
+
+    svgb2.selectAll(".text")
+        .data(databar2)
+        .enter()
+        .append("text")
+        .attr("class","label")
+        .attr("x", (function(d) { return xb2(d.condition)+45; }  ))
+        .attr("y", function(d) { return yb2(d.fatal_crash_numb1) - 20; })
+        .attr("dy", ".75em")
+        .text(function(d, i) {return d.fatal_crash_numb1; })
+        .attr("font-weight","800")
+        .style("font-size", "16px")
+        .style("font-family", "Calibri");
+
+    svgb2.selectAll("mybar")
+        .data(databar2)
+        .enter()
+        .append("rect")
+        .attr("x", function(d) { return xb2(d.condition); })
+        .attr("y", function(d) { return yb2(d.fatal_crash_numb1); })
+        .attr("width", xb2.bandwidth())
+        .attr("height", function(d) { return height - yb2(d.fatal_crash_numb1); })
+        .attr("fill", function(d, i) {
+
+            if (i == 0 || i == 2) return "#69b3a2";
+            else if (i==1 || i == 3) return "#A4DFD7"
+            else return "#B2BDC1"
+
+            });
+
+</script>
+
+
+</body>
+</html>
