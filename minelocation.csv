@@ -1,0 +1,590 @@
+rec_id,deptype,depname,country,lat_dms,lon_dms,latitude,longitude
+1,carb,Adiounedj,Mali,20-11N,0-04E,20.18333333,0.066666667
+2,carb,Agate Mountain,Namibia,18-27S,12-05E,-18.45,12.08333333
+3,carb,Aley,Canada,56-27N,123-44W,56.45,-123.7333333
+5,carb,Anezrouf,Mali,20-04N,0-03E,20.06666667,0.05
+6,carb,"Argor (South Bluff Creek, James Bay, Alpha-B)",Canada,50-45N,81-01W,50.75,-81.01666667
+7,carb,Bailundo,Angola,12-09S,15-57E,-12.15,15.95
+8,carb,Barra do Itapirapua,Brazil,24-41S,49-13W,-24.68333333,-49.21666667
+9,carb,Bayan Obo (Baotou),China,41-45N,109-58E,41.75,109.9666667
+10,carb,Bear Lodge Mountains (southern),United States,44-29N,104-27W,44.48333333,-104.45
+11,carb,Bearpaw Mountains (Rocky Boy),United States,48-10N,109-44W,48.16666667,-109.7333333
+13,carb,Big Spruce Lake,Canada,63-33N,115-55W,63.55,-115.9166667
+14,carb,Bonga,Angola,4-16S,13-58E,-4.266666667,13.96666667
+15,carb,Bou Naga,Mauritania,20-48N,13-42W,20.8,-13.7
+16,carb,Capuia,Angola,11-54S,16-15E,-11.9,16.25
+17,carb,Carb Lake,Canada,54-48N,92-00W,54.8,-92
+18,carb,Cerro Manomo,Bolivia,15-30S,60-43W,-15.5,-60.71666667
+19,carb,Changit,Russia,70-12N,100-06E,70.2,100.1
+21,carb,Chernigovskii (Novopoltavskii),Ukraine,47-14N,36-15E,47.23333333,36.25
+22,carb,Chiriguelo,Paraguay,22-39S,55-57W,-22.65,-55.95
+23,carb,Coola,Angola,12-31S,15-16E,-12.51666667,15.26666667
+24,carb,Dalkainle,Somalia,10-24N,43-16E,10.4,43.26666667
+25,carb,Deep Creek,United States,42-03N,119-57W,42.05,-119.95
+26,carb,Eldor Carbonatite Complex,Canada,56-36N,68-25W,56.6,-68.41666667
+28,carb,Elet'ozerskii (Elet'ozero),Russia,66-04N,31-57E,66.06666667,31.95
+29,carb,Elk Creek,United States,40-18N,96-12W,40.3,-96.2
+30,carb,Eureka,Namibia,21-58S,15-19E,-21.96666667,15.31666667
+31,carb,Fen,Norway,59-17N,9-17E,59.28333333,9.283333333
+32,carb,Francon Quarry - Orleans (Eastview),Canada,45-28N,75-33W,45.46666667,-75.55
+33,carb,Gem Park,United States,38-16N,105-33W,38.26666667,-105.55
+34,carb,Glenover,South Africa,24-41S,27-21E,-24.68333333,27.35
+36,carb,"Gornoe Ozero (Gornoozerskii, Ozrnyi)",Russia,59-56N,136-53E,59.93333333,136.8833333
+37,carb,Goudini,South Africa,25-08S,26-12E,-25.13333333,26.2
+38,carb,Hicks Dome,United States,37-36N,88-24W,37.6,-88.4
+39,carb,"Iron Hill (Powderhorn, Cebolla Creek)",United States,38-15N,107-03W,38.25,-107.05
+40,carb,Itanhaem,Brazil,24-08S,46-48W,-24.13333333,-46.8
+41,carb,Kalkfeld (Etaneno),Namibia,20-48S,16-07E,-20.8,16.11666667
+42,carb,Kapfrugwa (Gungwa),Zimbabwe,16-28S,32-09E,-16.46666667,32.15
+44,carb,Keshya,Zambia,15-53S,28-27E,-15.88333333,28.45
+45,carb,Khamna (Khamninskii),Russia,59-43N,136-25E,59.71666667,136.4166667
+46,carb,Khanneshin,Afghanistan,30-28N,63-35E,30.46666667,63.58333333
+47,carb,Kirumba,Congo (Zaire),1-05S,29-18E,-1.083333333,29.3
+48,carb,Kizilçaören,Turkey,39-38N,31-23E,39.63333333,31.38333333
+49,carb,Kugda,Russia,70-43N,103-28E,70.71666667,103.4666667
+51,carb,Lesnaya Varaka,Russia,67-23N,33-04E,67.38333333,33.06666667
+52,carb,Lofdal-Bergville,Namibia,20-21S,14-45E,-20.35,14.75
+53,carb,Lolekek,Uganda,1-45N,34-27E,1.75,34.45
+54,carb,Longonjo (Mt. Chibilundo),Angola,12-51S,015-15E,-12.85,15.25
+55,carb,Lugin Gol,Mongolia,42-57N,108-34E,42.95,108.5666667
+56,carb,"Lupongola (Lupulonga, Chitado)",Angola,17-11S,13-42E,-17.18333333,13.7
+57,carb,Makonde,Tanzania,10-03S,34-31E,-10.05,34.51666667
+59,carb,Marinkas Quellen (Marinkas Kwela),Namibia,28-10S,17-25E,-28.16666667,17.41666667
+60,carb,Matchinskii,Kyrgyzstan,39-32N,70-47E,39.53333333,70.78333333
+61,carb,Mato Preto,Brazil,24-45S,49-12W,-24.75,-49.2
+62,carb,Megiscane Lake,Canada,48-34N,75-36W,48.56666667,-75.6
+63,carb,Miaoya,China,32-15N,110-12E,32.25,110.2
+64,carb,Monte Verde,Angola,12-11S,15-02E,-12.18333333,15.03333333
+65,carb,Mountain Pass,United States,35-29N,115-32W,35.48333333,-115.5333333
+67,carb,"Mushgai Khudag (Mushgia Khudag, Mushugai Khuduk, Mushugai-Hudag)",Mongolia,44-20N,104-00E,44.33333333,104
+68,carb,Narssarssuaq (Narssarssuk),Greenland,61-11N,45-25W,61.18333333,-45.41666667
+69,carb,Ngualla,Tanzania,7-42S,32-50E,-7.7,32.83333333
+70,carb,Nizhnesayanskii,Russia,53-31N,100-31E,53.51666667,100.5166667
+71,carb,"Nkombwa Hill (Nkumbwa, Nkumba)",Zambia,10-09S,32-51E,-10.15,32.85
+72,carb,Nolan's Bore,Australia,22-35S,133-14E,-22.58333333,133.2333333
+74,carb,"Nooitgedacht (Gelukshoek, Nooitgedagt)",South Africa,25-03S,27-30E,-25.05,27.5
+75,carb,North Fork area,United States,45-24N,114-00W,45.4,-114
+76,carb,Nsengwa,Malawi,15-25S,34-43E,-15.41666667,34.71666667
+77,carb,Okorusu Complex,Namibia,20-02S,16-46E,-20.03333333,16.76666667
+78,carb,"Ondurukurme Complex (Ondumakorume, Kameelberg)",Namibia,20-46S,16-15E,-20.76666667,16.25
+79,carb,Palabora (Phalaborwa),South Africa,23-59S,31-07E,-23.98333333,31.11666667
+80,carb,Qaqarssuk,Greenland,65-23N,51-42W,65.38333333,-51.7
+82,carb,Ravalli County,United States,45-30N,113-20W,45.5,-113.3333333
+83,carb,Rock Canyon Creek (Candy),Canada,,,,
+84,carb,Salitre I and II,Brazil,19-02S,46-47W,-19.03333333,-46.78333333
+85,carb,Salmon Bay,United States,56-19-12N,133-10-06W,56.32,-133.1683333
+86,carb,Sandkopsdrif (Zandkops Drift),South Africa,30-53S,17-57E,-30.88333333,17.95
+87,carb,"Sangu Carbonatite Group, Karema Depression (includes Ikola, Ikambwa, Middle carbonatites)",Tanzania,6-48S,30-31E,-6.8,30.51666667
+88,carb,Sarfartoq,Greenland,66-30N,51-15W,66.5,-51.25
+90,carb,Siilinjarvi,Finland,63-05N,27-40E,63.08333333,27.66666667
+91,carb,Sokolo,Kenya,0-28S,34-23E,-0.466666667,34.38333333
+92,carb,Songwe Scarp,Tanzania,8-81S,33-16E,-9.35,33.26666667
+93,carb,Springer (Lavergne),Canada,46-27N,79-57W,46.45,-79.95
+94,carb,St. Honoré,Canada,48-33N,71-04W,48.55,-71.06666667
+95,carb,"Tamazert (Oued Tamazert, Tamazeght, Bou Agrao)",Morocco,32-34N,4-39W,32.56666667,-4.65
+97,carb,Tikshozerskii,Russia,66-17N,31-40E,66.28333333,31.66666667
+98,carb,Tundulu,Malawi,15-32S,35-48E,-15.53333333,35.8
+99,carb,"Venturi Township (Township 107, Spanish River)",Canada,46-35N,81-43W,46.58333333,-81.71666667
+100,carb,Verkhnesayanskii,Russia,53-27N,100-25E,53.45,100.4166667
+101,carb,Virulundo,Angola,16-18S,12-56E,-16.3,12.93333333
+102,carb,Vishnevye Mountains (Ilmenogorskii-Vishnevogorskii),Russia,55-59N,60-34E,55.98333333,60.56666667
+103,carb,Vuoriyarvi,Russia,6-48N,30-07E,6.8,30.11666667
+105,carb,Wajiertage (Wajiltag),China,39-30N,79-00E,39.5,79
+106,carb,"Weishan (Chisan, Xishan, 1010)",China,34-45N,117-12E,34.75,117.2
+107,carb,Welgevonden,South Africa,25-26S,27-26E,-25.43333333,27.43333333
+108,carb,Wet Mountains,United States,38-12N,105-24W,38.2,-105.4
+109,carb,Yangdun,China,27-50N,118-30E,27.83333333,118.5
+110,carb,Yinachange (Yenachang),China,25-30N,102-00E,25.5,102
+111,carb,Zijingshan,China,38-20N,110-50E,38.33333333,110.8333333
+113,carb-re,Anitápolis,Brazil,27-48S,49-05W,-27.8,-49.08333333
+114,carb-re,Araxa (Barreiro),Brazil,19-38S,46-56W,-19.63333333,-46.93333333
+115,carb-re,Bingo (Bingu),Congo (Zaire),0-36N,29-17E,0.6,29.28333333
+116,carb-re,"Bukusu Complex (Busumbu, Busumu, Busuku)",Uganda,0-53N,34-16E,0.883333333,34.26666667
+117,carb-re,Buru,Kenya,0-11S,35-10E,-0.183333333,35.16666667
+118,carb-re,Caiapo,Brazil,16-00S,51-45W,-16,-51.75
+120,carb-re,Cargill,Canada,49-18N,82-49W,49.3,-82.81666667
+121,carb-re,Catalão I,Brazil,18-15S,47-47W,-18.25,-47.78333333
+122,carb-re,Catalão II,Brazil,18-02S,47-52W,-18.03333333,-47.86666667
+123,carb-re,Cerro Impacto,Venezuela,6-00N,65-10W,6,-65.16666667
+124,carb-re,Chilwa Island,Malawi,15-20S,35-36E,-15.33333333,35.6
+125,carb-re,Cone Negosa (Negoza),Mozambique,15-32S,31-16E,-15.53333333,31.26666667
+126,carb-re,Kaluwe,Zambia,15-11S,30-01E,-15.18333333,30.01666667
+128,carb-re,Kangankunde,Malawi,15-08S,34-55E,-15.13333333,34.91666667
+129,carb-re,Kapiri,Malawi,15-17S,34-55E,-15.28333333,34.91666667
+130,carb-re,Karonge (Gakara),Burundi,3-30S,29-27E,-3.5,29.45
+131,carb-re,Luicuisse (Lucuisse),Mozambique,12-23S,36-11E,-12.38333333,36.18333333
+132,carb-re,Mabounie,Gabon,00-42S,11-42E,-0.7,11.7
+133,carb-re,Magnet Cove,United States,34-27N,92-52W,34.45,-92.86666667
+134,carb-re,Maicuru,Brazil,00-28S,54-13W,-0.466666667,-54.21666667
+136,carb-re,Maraconai,Brazil,00-32S,53-24W,-0.533333333,-53.4
+137,carb-re,Martison Lake,Canada,50-19N,83-24W,50.31666667,-83.4
+138,carb-re,"Matum (Marum, Mutum)",Brazil,01-53S,57-25W,-1.883333333,-57.41666667
+139,carb-re,Mbeya (Panda Hill),Tanzania,9-00S,33-14E,-9,33.23333333
+140,carb-re,Morro Dos Seis Lagos (Sao Gabriel da Cachoeira),Brazil,00-38N,66-24W,0.633333333,-66.4
+141,carb-re,Mount Weld,Australia,28-52S,122-33E,-28.86666667,122.55
+143,carb-re,Mrima Hill,Kenya,04-25S,39-15W,-4.416666667,-39.25
+144,carb-re,Oka,Canada,45-30N,74-00W,45.5,-74
+145,carb-re,Ruri Complex,Kenya,00-32S,34-20E,-0.533333333,34.33333333
+146,carb-re,Sallanlatvi (Sallanlatvinskii),Russia,66-57N,29-10E,66.95,29.16666667
+147,carb-re,Sebl'yavr Carbonatite Complex (Seblyavr),Russia,68-43N,32-08E,68.71666667,32.13333333
+148,carb-re,Serra Negra,Brazil,18-55S,46-50W,-18.91666667,-46.83333333
+149,carb-re,Sokli,Finland,67-45N,29-15E,67.75,29.25
+151,carb-re,Sukulu,Uganda,0-39N,34-09E,0.65,34.15
+152,carb-re,Tapira,Brazil,19-54S,46-52W,-19.9,-46.86666667
+153,carb-re,"Tchivira (Chivara, Quicuco)",Angola,14-19S,13-53E,-14.31666667,13.88333333
+154,carb-re,Tomtor,Russia,71-00N,116-35E,71,116.5833333
+155,carb-re,Twareietau,Guyana,02-00N,57-00W,2,-57
+156,carb-re,Wigu Hill,Tanzania,7-26S,37-34E,-7.433333333,37.56666667
+157,carb-re,Yangibana,Australia,23-53S,116-10E,-23.88333333,116.1666667
+159,alk-ig,Akitskii,Russia,56-01N,110-22E,56.01666667,110.3666667
+160,alk-ig,Ablah,Saudi Arabia,20-05N,41-55E,20.08333333,41.91666667
+161,alk-ig,Ambatofinandrahana igneous complex,Madagascar,20-27S,46-57E,-20.45,46.95
+162,alk-ig,Ampasindava area-  Bezavona complex,Madagascar,13-48S,48-05E,-13.8,48.08333333
+163,alk-ig,Amis Complex,Namibia,21-10S,14-30E,-21.16666667,14.5
+164,alk-ig,Arenopolis (Areianopolis),Brazil,16-22S,51-32W,-16.36666667,-51.53333333
+166,alk-ig,Azov Sea Coast Dikes,Ukraine,47-11N,36-34E,47.18333333,36.56666667
+167,alk-ig,Bakhuis Mountains - K/3 Deposit,Surinam,4-26N,57-04W,4.433333333,-57.06666667
+168,alk-ig,Bokan Mountain (Ross-Adams),United States,54-55N,132-08W,54.91666667,-132.1333333
+169,alk-ig,Brandberg Complex,Namibia,21-08S,14-33E,-21.13333333,14.55
+170,alk-ig,Brockman,Australia,18-19S,127-46E,-18.31666667,127.7666667
+171,alk-ig,Bunduk,Armenia,40-45N,44-45E,40.75,44.75
+172,alk-ig,Burpalinskii (Burpala),Russia,56-33N,110-45E,56.55,110.75
+174,alk-ig,Caballo Mountains,United States,32-32N,100-17W,32.53333333,-100.2833333
+175,alk-ig,Cerro Bamba,Bolivia,,,,
+176,alk-ig,Chilembwe (Petauke),Zambia,13-59S,31-41E,-13.98333333,31.68333333
+177,alk-ig,Churuata,Venezuela,03-27N,65-28W,3.45,-65.46666667
+178,alk-ig,Cida,China,27-00N,102-05E,27,102.0833333
+179,alk-ig,Coldwell complex,Canada,48-47N,86-30W,48.78333333,-86.5
+180,alk-ig,Cornudas Mtns - Diablo Plateau (Wind Mtn.),United States,31-29N to 32-06N,105-08W to 105-38W,31.79166667,-105.3833333
+182,alk-ig,Dara-Pioz,Tajikistan,39-25N,70-44E,39.41666667,70.73333333
+183,alk-ig,Dong Pao,Vietnam,22-17N,103-34E,22.28333333,103.5666667
+184,alk-ig,Dora Bay,United States,55-14N,132-13W,55.23333333,-132.2166667
+185,alk-ig,Eden Lake,Canada,56-38N,100-15W,56.63333333,-100.25
+186,alk-ig,Elisenvaara (Elisenvaarskii; includes Kaivimyaki/Kaivomaki and Raivimyaki/ Raivimaki),Russia,61-25N,29-55E,61.41666667,29.91666667
+187,alk-ig,"Eljozero (Elet'ozero, Elet'ozerskii)",Russia,66-04N,31-57E,66.06666667,31.95
+189,alk-ig,Fanshan (Fangshan),China,40-22N,115-13E,40.36666667,115.2166667
+190,alk-ig,Flowers Bay,Canada,55-40N,59-50W,55.66666667,-59.83333333
+191,alk-ig,Gardiner complex,Greenland,68-37N,33-09W,68.61666667,-33.15
+192,alk-ig,Ghurayyah,Saudi Arabia,27-55N,35-48E,27.91666667,35.8
+193,alk-ig,Gremyakha-Vyrmes,Russia,68-38N,32-28E,68.63333333,32.46666667
+194,alk-ig,Guelb Zeilaga,Mauritania,19-00N,13-18W,19,-13.3
+195,alk-ig,"Igaliko complex - Motzfeldt center, N & S Qoroq, Igdlerfigssalik",Greenland,61-08N,45-10W,61.13333333,-45.16666667
+197,alk-ig,Ilimaussaq,Greenland,63-00N,51-12W,63,-51.2
+198,alk-ig,Ilomba,Malawi,9-31S,33-11E,-9.516666667,33.18333333
+199,alk-ig,Itremo,Madagascar,20-35S,46-38E,-20.58333333,46.63333333
+200,alk-ig,Jabal Archenu,Libya,22-16N,24-43E,22.26666667,24.71666667
+201,alk-ig,Jabal Hamra',Saudi Arabia,26-04N,38-36E,26.06666667,38.6
+202,alk-ig,Jabal Sa'id (Jabal Sayid),Saudi Arabia,23-49N,40-56E,23.81666667,40.93333333
+203,alk-ig,Jabal Tawlah,Saudi Arabia,28-14N,35-23E,28.23333333,35.38333333
+205,alk-ig,Jacupiranga,Brazil,24-42S,48-08W,-24.7,-48.13333333
+206,alk-ig,"Jarud Qi, no. 801",China,44-37N,120-58E,44.61666667,120.9666667
+207,alk-ig,Junguni,Malawi,15-02S,35-17E,-15.03333333,35.28333333
+208,alk-ig,Kamloops,Canada,50-40N,120-04W,50.66666667,-120.0666667
+209,alk-ig,Karaganskii,Kyrgyzstan,39-45N,70-00E,39.75,70
+210,alk-ig,Karsakpai,Kazakhstan,47-53N,66-25E,47.88333333,66.41666667
+212,alk-ig,Khaldzan-Buregtey,Mongolia,48-25N,91-58E,48.41666667,91.96666667
+213,alk-ig,Khan Bogdo,Mongolia,43-12N,107-12E,43.2,107.2
+214,alk-ig,Khibina (Khibiny),Russia,67-43N,33-47E,67.71666667,33.78333333
+215,alk-ig,Kipawa Lake,Canada,46-48N,78-30W,46.8,-78.5
+216,alk-ig,Kodal,Norway,59-15N,10-10E,59.25,10.16666667
+217,alk-ig,Konder,Russia,57-30N,134-25E,57.5,134.4166667
+218,alk-ig,Korgeredaba,Russia,50-05N,97-15E,50.08333333,97.25
+220,alk-ig,Korsun-Novomirgorodskii pluton margin,Ukraine,48-14N,31-17E,48.23333333,31.28333333
+221,alk-ig,Kovdor Complex (Kovdorskoe),Russia,67-34N,30-24E,67.56666667,30.4
+222,alk-ig,Kpong area,Ghana,6-06N,0-03E,6.1,0.05
+223,alk-ig,"Kribi  (Mont des Eléphants, Mont de Rocher du Loup)",Cameroon,02-57N,09-55E,2.95,9.916666667
+224,alk-ig,Kutessai-II,Kyrgyzstan,42-40N,76-10E,42.66666667,76.16666667
+225,alk-ig,Kyzyl-Ompul,Kyrgyzstan,42-21N,75-55E,42.35,75.91666667
+226,alk-ig,Lackner Lake (Nemegos),Canada,47-45N,83-10W,47.75,-83.16666667
+228,alk-ig,Langesundsfjord District (Larvik),Norway,59-00N,09-45E,59,9.75
+229,alk-ig,Lavrent'evskii,Russia,67-16N,37-01E,67.26666667,37.01666667
+230,alk-ig,Letitia Lake - Mann 1,Canada,54-14N,62-23W,54.23333333,-62.38333333
+231,alk-ig,"Los Archipelago (Los Islands, Iles de Los)",Guinea,9-28N,13-48W,9.466666667,-13.8
+232,alk-ig,Lovozero,Russia,67-47N,34-45E,67.78333333,34.75
+233,alk-ig,Lutala (Serra da Neve),Angola,13-43S,13-10E,-13.71666667,13.16666667
+235,alk-ig,Malotersyanskii,Ukraine,48-20N,35-39E,48.33333333,35.65
+236,alk-ig,Maoniuping,China,,,,
+237,alk-ig,Meponda,Mozambique,13-27S,34-54E,-13.45,34.9
+238,alk-ig,Mianning,China,28-33N,102-11E,28.55,102.1833333
+239,alk-ig,Mount Prindle (Roy Creek),United States,65-29N,147-06W,65.48333333,-147.1
+240,alk-ig,Mount St. Hilaire,Canada,45-33N,73-10W,45.55,-73.16666667
+241,alk-ig,Mutum,Brazil,01-53N,57-25W,1.883333333,-57.41666667
+243,alk-ig,Nejoio,Angola,13-40S,13-14E,-13.66666667,13.23333333
+244,alk-ig,Nemegosenda Lake,Canada,48-00N,83-05W,48,-83.08333333
+245,alk-ig,Nosy Komba,Madagascar,13-28S,48-20E,-13.46666667,48.33333333
+246,alk-ig,Pajarito Mountain,United States,33-14N,105-26W,33.23333333,-105.4333333
+247,alk-ig,"Pilansberg Complex (Pilanesberg, Pilaan's berg)",South Africa,25-14S,27-04E,-25.23333333,27.06666667
+248,alk-ig,Pocos de Caldas (Morro do Ferro),Brazil,21-55S,46-34W,-21.91666667,-46.56666667
+249,alk-ig,Ponoiskii,Russia,67-01N,39-12E,67.01666667,39.2
+251,alk-ig,Qiganlaing,China,,,,
+252,alk-ig,Red Wine,Canada,54-05N,62-35W,54.08333333,-62.58333333
+253,alk-ig,Rexspar (Birch Island),Canada,51-34N,119-54W,51.56666667,-119.9
+254,alk-ig,Saima,China,40-59N,124-12E,40.98333333,124.2
+255,alk-ig,Sakhariokskii (Sacharijok),Russia,67-40N,36-12E,67.66666667,36.2
+256,alk-ig,Seligdar,Russia,58-24N,125-18E,58.4,125.3
+258,alk-ig,Shartolgoi,Mongolia,49-03N,92-45E,49.05,92.75
+259,alk-ig,Shvanidzorskii,Armenia,39-00N,46-23E,39,46.38333333
+260,alk-ig,Sierra de Tamaulipas,Mexico,23-12N,98-24W,23.2,-98.4
+261,alk-ig,Songwe Syenite (includes Ilomba and Ulindi intrusions),Malawi,9-33S,33-16E,-9.55,33.26666667
+262,alk-ig,Srednetatarskii (Zaangarskii),Russia,58-24N,93-35E,58.4,93.58333333
+263,alk-ig,Srednevorogovskii,Russia,61-15N,90-02E,61.25,90.03333333
+264,alk-ig,Strange Lake (Lac Brisson),Canada,56-18N,64-07W,56.3,-64.11666667
+266,alk-ig,Sucunduri,Brazil,8-32S,59-28W,-8.533333333,-59.46666667
+267,alk-ig,"Sugar Loaf (Mumbwa North, NW Mumbwa)",Zambia,14-45S,26-50E,-14.75,26.83333333
+268,alk-ig,Synnyr,Russia,56-55N,111-20E,56.91666667,111.3333333
+269,alk-ig,Tezhsar,Armenia,40-41N,44-39E,40.68333333,44.65
+270,alk-ig,Thor Lake (Blachford Lake),Canada,62-06N,112-40W,62.1,-112.6666667
+271,alk-ig,Tiguesmat el Akhdar (Tigsmat),Mauritania,24-51N,8-11W,24.85,-8.183333333
+272,alk-ig,Tleumbetskii,Kazakhstan,50-46N,77-02E,50.76666667,77.03333333
+274,alk-ig,Tommot,Russia,58-23N,125-13E,58.38333333,125.2166667
+275,alk-ig,Toongi  (Dubbo),Australia,32-26S,148-36E,-32.43333333,148.6
+276,alk-ig,Topsails,Canada,48-45N,57-00W,48.75,-57
+277,alk-ig,Tsakhirt,Mongolia,48-33N,91-56E,48.55,91.93333333
+278,alk-ig,Ulaan Tolgoi,Mongolia,49-32N,93-01E,49.53333333,93.01666667
+279,alk-ig,Ulkanshoe,Russia,56-19N,134-49E,56.31666667,134.8166667
+281,alk-ig,Umm al Birak,Saudi Arabia,23-22N,39-13E,23.36666667,39.21666667
+282,alk-ig,Vedi-Azatskii,Armenia,39-59N,45-00E,39.98333333,45
+283,alk-ig,Wangu Hill,South Africa,28-48S,31-20E,-28.8,31.33333333
+284,alk-ig,"Western Keiv (Rovozero, Platongora, Yumperuaiv)",Russia,67-47N,36-30E,67.78333333,36.5
+285,alk-ig,White Tundra,Russia,67-28N,35-50E,67.46666667,35.83333333
+286,alk-ig,Wind Mountain (see Cornudas Mtns),United States,32-02N,105-32W,32.03333333,-105.5333333
+287,alk-ig,Yastrebets,Ukraine,51-14N,28-51E,51.23333333,28.85
+289,alk-ig,Yousuobao,China,,,,
+290,hyd-feox,Mineville dumps,United States,44-04N,73-29W,44.06666667,-73.48333333
+291,hyd-feox,Olympic Dam,Australia,30-27S,136-53E,-30.45,136.8833333
+292,hyd-feox,Scrub Oaks,United States,,,,
+293,oth-ig-aff,Alice Springs,Australia,23-04S,134-33E,-23.06666667,134.55
+294,oth-ig-aff,Atlin-Ruffner,Canada,45-01N,78-11W,45.01666667,-78.18333333
+295,oth-ig-aff,Azovske,Ukraine,45-35N,34-34E,45.58333333,34.56666667
+297,oth-ig-aff,Cooglegong,Australia,21-30S,119-24E,-21.5,119.4
+298,oth-ig-aff,Denegama,Sri Lanka,6-43N,80-43E,6.716666667,80.71666667
+299,oth-ig-aff,Diamond Creek,United States,45-15N,113-54W,45.25,-113.9
+300,oth-ig-aff,Guilherme Group,Mozambique,14-24S,40-21E,-14.4,40.35
+301,oth-ig-aff,Guposhan,China,,,,
+302,oth-ig-aff,Hall Mountain Group,United States,48-59N,116-26W,48.98333333,-116.4333333
+304,oth-ig-aff,Ile (Namatacatue),Mozambique,16-02S,37-05E,-16.03333333,37.08333333
+305,oth-ig-aff,Kasagwe,Burundi,3-25S,29-25E,-3.416666667,29.41666667
+306,oth-ig-aff,Little Friar Mountain (Massie),United States,37-46N,79-06W,37.76666667,-79.1
+307,oth-ig-aff,"Llano County (Williams Mine, others)",United States,30-40-09N,098-28-22W,30.66916667,-98.47277778
+308,oth-ig-aff,M'Tomoti,Mozambique,15-30S,38-19E,-15.5,38.31666667
+309,oth-ig-aff,Macotaia,Mozambique,15-25S,38-25E,-15.41666667,38.41666667
+310,oth-ig-aff,McKeel Lake,Canada,45-29-03N,66-10-55W,45.48416667,-66.18194444
+312,oth-ig-aff,Mineral X,United States,35-07N,114-04W,35.11666667,-114.0666667
+313,oth-ig-aff,Nipissis,Canada,51-00N,65-15W,51,-65.25
+314,oth-ig-aff,Nisikkatch-Hoidas Lakes,Canada,,,59.9379,-107.8012
+315,oth-ig-aff,Nuwara Eliya,Sri Lanka,7-18N,80-46E,7.3,80.76666667
+316,oth-ig-aff,Odegarden,Norway,58-57N,9-38E,58.95,9.633333333
+317,oth-ig-aff,Petaca District,United States,36-30N,106-03W,36.5,-106.05
+318,oth-ig-aff,Pitinga,Brazil,00-45S,60-07W,-0.75,-60.11666667
+320,oth-ig-aff,Pomona Tile Company,United States,34-20N,115-33W,34.33333333,-115.55
+321,oth-ig-aff,Signal district,United States,34-32N,113-33W,34.53333333,-113.55
+322,oth-ig-aff,Teldeniya,Sri Lanka,7-18N,80-46E,7.3,80.76666667
+323,oth-ig-aff,Telixtlahuaca,Mexico,17-18N,96-54W,17.3,-96.9
+324,oth-ig-aff,Valle Fertil,Argentina,31-00S,67-30W,-31,-67.5
+325,oth-ig-aff,Wolf Mountain,United States,62-20N,161-29W,62.33333333,-161.4833333
+327,oth-ig-aff,Xihuashan,China,25-26N,114-20E,25.43333333,114.3333333
+328,ion-ad,Chenxian County,China,25-48N,113-02E,25.8,113.0333333
+329,ion-ad,Dingnan,China,,,24.7797,115.056
+330,ion-ad,Longnan (Zudong?),China,24-54N,114-48E,24.9,114.8
+331,ion-ad,Qingyuan,China,23-42N,113-02E,23.7,113.0333333
+332,ion-ad,Ruyuan,China,24-46N,113-16E,24.76666667,113.2666667
+333,ion-ad,"Xunwun (Xunwu, Xun wa, Heling, Nanqiao)",China,24-58N,115-38E,24.96666667,115.6333333
+335,ion-ad,Zhangding (Longyan),China,25-08N,117-02E,25.13333333,117.0333333
+336,ion-ad,Zixing,China,,,,
+337,met,Anomalnoe,Russia,54-04N,157-24E,54.06666667,157.4
+338,met,Indian Creek District,United States,45-25N,114-10W,45.41666667,-114.1666667
+339,met,Lemhi Pass,United States,44-57N,113-37W,44.95,-113.6166667
+340,met,Mineral Hill District,United States,45-28N,114-17W,45.46666667,-114.2833333
+341,met,Monumental Summit,United States,44-54N,115-16W,44.9,-115.2666667
+343,met,Music Valley,United States,34-01N,115-57W,34.01666667,-115.95
+344,met,Nam Xe North (Mau Xe North),Vietnam,22-29N,103-30E,22.48333333,103.5
+345,met,Nam Xe South (Mau Xe North),Vietnam,22-29N,103-30E,22.48333333,103.5
+346,met,Sheep Creek,United States,45-30N,114-20W,45.5,-114.3333333
+347,met,Wuhe,China,23-28N,112-20E,23.46666667,112.3333333
+348,placer-sh,Agnes Waters (Rocky Point),Australia,24-13S,151-54E,-24.21666667,151.9
+350,placer-sh,Aguas Dulces,Uruguay,34-15S,53-43W,-34.25,-53.71666667
+351,placer-sh,Alcobaça,Brazil,17-15S,39-14W,-17.25,-39.23333333
+352,placer-sh,Allied Eneabba,Australia,29-54S,115-16E,-29.9,115.2666667
+353,placer-sh,Alwaya (Alwaye),India,10-07N,76-20E,10.11666667,76.33333333
+354,placer-sh,Amity,Australia,27-24S,153-26E,-27.4,153.4333333
+355,placer-sh,"Anchieta (Parati, Imbiri, Pipa de Viho, Mãebá)",Brazil,20-46S,40-35W,-20.76666667,-40.58333333
+356,placer-sh,Aracruz,Brazil,19-58S,40-09W,-19.96666667,-40.15
+358,placer-sh,Australind,Australia,33-14S,115-45E,-33.23333333,115.75
+359,placer-sh,Banda Aceh,Indonesia,5-35N,95-20E,5.583333333,95.33333333
+360,placer-sh,Banka Island (Bangka),Indonesia,2-15S,106-00E,-2.25,106
+361,placer-sh,Barrytown,New Zealand,42-14S,171-19E,-42.23333333,171.3166667
+362,placer-sh,Beenup (Scott River),Australia,,,,
+363,placer-sh,"Beihei (Beihai, Peibhai?) District",China,21-29N,109-06E,21.48333333,109.1
+364,placer-sh,Belitung (Billiton),Indonesia,2-50S,107-55E,-2.833333333,107.9166667
+366,placer-sh,Beruwala,Sri Lanka,6-29N,79-59E,6.483333333,79.98333333
+367,placer-sh,Bilugyun and Kyaikkami Beach,Burma,16-20N,97-27E,16.33333333,97.45
+368,placer-sh,Birthday Gift (Murray Basin),Australia,,,,
+369,placer-sh,Bowen (Abbot Point),Australia,19-53S,148-05E,-19.88333333,148.0833333
+370,placer-sh,Brejo Grande - Pacatuba,Brazil,10-30S,36-26W,-10.5,-36.43333333
+371,placer-sh,Bridge Hill Ridge,Australia,32-25S,152-28E,-32.41666667,152.4666667
+373,placer-sh,Brunswick-Altamaha,United States,31-19N,81-28W,31.31666667,-81.46666667
+374,placer-sh,"Buena (Buena Norte, Buena Sul)",Brazil,21-31S,41-05W,-21.51666667,-41.08333333
+375,placer-sh,Bukit Duabelas,Indonesia,1-57S,102-40E,-1.95,102.6666667
+376,placer-sh,Bunbury,Australia,33-19S,115-38E,-33.31666667,115.6333333
+377,placer-sh,Busselton East,Australia,33-40S,115-23E,-33.66666667,115.3833333
+378,placer-sh,Byfield (Bayfield),Australia,22-48S,150-46E,-22.8,150.7666667
+379,placer-sh,Cam Hoa,Vietnam,18-13N,105-52E,18.21666667,105.8666667
+381,placer-sh,Cam Nhuong,Vietnam,18-18N,105-48E,18.3,105.8
+382,placer-sh,Camaratuba,Brazil,06-54S,35-00W,-6.9,-35
+383,placer-sh,Capel,Australia,33-33S,115-33E,-33.55,115.55
+384,placer-sh,Capel (North Capel),Australia,33-31S,115-35E,-33.51666667,115.5833333
+385,placer-sh,Capel South,Australia,33-37S,115-27E,-33.61666667,115.45
+386,placer-sh,Cat Khanh,Vietnam,13-30N,105-12E,13.5,105.2
+387,placer-sh,Cataby,Australia,30-43S,115-31E,-30.71666667,115.5166667
+389,placer-sh,Changan,China,,,,
+390,placer-sh,"Chatrapur (Chartrapur, Orissa Sands Complex/OSCOM)",India,19-18N,84-57E,19.3,84.95
+391,placer-sh,Chavara (Quilon)- IREL,India,08-57N,76-30E,8.95,76.5
+392,placer-sh,Chavara (Quilon)- KMML,India,09-00N,76-30E,9,76.5
+393,placer-sh,Cheyne Bay,Australia,34-34S,118-45E,-34.56666667,118.75
+394,placer-sh,Chumphon,Thailand,10-30N,99-10E,10.5,99.16666667
+396,placer-sh,Coleroon - Sirkazhi,India,11-15N,79-45E,11.25,79.75
+397,placer-sh,"Congolone (Moma-Congolone, Ancoche)",Mozambique,16-01S,40-05E,-16.01666667,40.08333333
+398,placer-sh,Coojarloo,Australia,30-40S,115-20E,-30.66666667,115.3333333
+399,placer-sh,Cooloola,Australia,26-05S,153-07E,-26.08333333,153.1166667
+400,placer-sh,Coromandel Peninsula,New Zealand,37-00S,175-52E,-37,175.8666667
+401,placer-sh,Cumberland Island,United States,30-54N,81-27W,30.9,-81.45
+402,placer-sh,"Cumuruxatiba (Curumuxatiba, Comoxatiba)",Brazil,18-22S,40-42W,-18.36666667,-40.7
+404,placer-sh,Currumbin,Australia,28-08S,153-29E,-28.13333333,153.4833333
+405,placer-sh,Curtis Island,Australia,23-38S,151-10E,-23.63333333,151.1666667
+406,placer-sh,Dardanup,Australia,33-24S,115-45E,-33.4,115.75
+407,placer-sh,Dianbai,China,21-30N,111-01E,21.5,111.0166667
+408,placer-sh,Dongara,Australia,29-15S,114-56E,-29.25,114.9333333
+409,placer-sh,Durness (Tea Garden),Australia,32-40S,152-09E,-32.66666667,152.15
+410,placer-sh,Eneabba,Australia,29-47S,115-13E,-29.78333333,115.2166667
+412,placer-sh,Eneabba North,Australia,29-37S,115-20E,-29.61666667,115.3333333
+413,placer-sh,Eneabba West,Australia,29-55S,115-15E,-29.91666667,115.25
+414,placer-sh,Evans Head- Yuraygir National Park area,Australia,29-05S,153-26E,-29.08333333,153.4333333
+415,placer-sh,Fakiraghona,Bangladesh,21-33N,91-57E,21.55,91.95
+416,placer-sh,Fort Dauphine,Madagascar,25-00S,47-00E,-25,47
+417,placer-sh,Foulun,Taiwan,24-41N,121-45E,24.68333333,121.75
+419,placer-sh,Fraser Island (Frazer Island),Australia,25-22S,153-07E,-25.36666667,153.1166667
+420,placer-sh,Fullerton,Australia,32-50S,151-47E,-32.83333333,151.7833333
+421,placer-sh,Gingin,Australia,31-24S,115-56E,-31.4,115.9333333
+422,placer-sh,Gladstone Mainland,Australia,23-50S,151-15E,-23.83333333,151.25
+423,placer-sh,Glogova-Sisesti District,Romania,44-55N,22-58E,44.91666667,22.96666667
+424,placer-sh,Gold Coast,Australia,28-00S,153-25E,-28,153.4166667
+425,placer-sh,Green Cove Springs,United States,29-52N,81-43W,29.86666667,-81.71666667
+427,placer-sh,"Guarapari (Praia do Vaz, Vila Velha, Rastinga, Canto do Riacho, Praia de Diogo)",Brazil,20-48S,40-30W,-20.8,-40.5
+428,placer-sh,Gympie,Australia,26-11S,152-40E,-26.18333333,152.6666667
+429,placer-sh,Haifengtao,Taiwan,23-43N,120-09E,23.71666667,120.15
+430,placer-sh,Haikang,China,20-56N,110-04E,20.93333333,110.0666667
+431,placer-sh,Haishanchow,Taiwan,23-19N,120-06E,23.31666667,120.1
+432,placer-sh,Ham Tan,Vietnam,10-42N,107-35E,10.7,107.5833333
+433,placer-sh,Harrington,Australia,31-52S,152-42E,-31.86666667,152.7
+435,placer-sh,Hawks Nest,Australia,32-40S,152-10E,-32.66666667,152.1666667
+436,placer-sh,Higgins,Australia,33-35S,115-36E,-33.58333333,115.6
+437,placer-sh,Hilton Head Island,United States,32-12N,80-44W,32.2,-80.73333333
+438,placer-sh,Huong Dien,Vietnam,16-39N,107-28E,16.65,107.4666667
+439,placer-sh,Hwajinpo,"Korea, Republic of",38-25N,128-30E,38.41666667,128.5
+440,placer-sh,Imuruan Bay,Philippines,10-45N,119-20E,10.75,119.3333333
+442,placer-sh,Induruwa (Kaikawela and Polkotuwa Beaches),Sri Lanka,,,,
+443,placer-sh,Inani,Bangladesh,21-09N,92-04E,21.15,92.06666667
+444,placer-sh,"Itapemirim (Boa Vista, Siri)",Brazil,21-10S,40-55W,-21.16666667,-40.91666667
+445,placer-sh,Jangardup,Australia,34-22S,115-37E,-34.36666667,115.6166667
+446,placer-sh,Jurien Bay,Australia,30-19S,115-10E,-30.31666667,115.1666667
+447,placer-sh,Kaikawela,Sri Lanka,6-22N,80-00E,6.366666667,80
+448,placer-sh,Kalutara,Sri Lanka,6-35N,79-59E,6.583333333,79.98333333
+450,placer-sh,Ke Sung,Vietnam,16-30N,107-35E,16.5,107.5833333
+451,placer-sh,Kelani River,Sri Lanka,7-00N,79-50E,7,79.83333333
+452,placer-sh,Kembajan,Indonesia,0-33N,110-25E,0.55,110.4166667
+453,placer-sh,Kerr-McGee deposit,United States,36-07N,88-11W,36.11666667,-88.18333333
+454,placer-sh,King Sound,Australia,16-50S,123-25E,-16.83333333,123.4166667
+455,placer-sh,Kingscliff (Cudgen),Australia,28-16S,153-34,-28.26666667,153.5666667
+456,placer-sh,Kirra,Australia,29-00S,153-32E,-29,153.5333333
+458,placer-sh,Kokkilai,Sri Lanka,8-59N,80-57E,8.983333333,80.95
+459,placer-sh,Koombana Bay,Australia,33-19S,115-39E,-33.31666667,115.65
+460,placer-sh,Kudremala Point (Kudremalai),Sri Lanka,8-58N,79-54E,8.966666667,79.9
+461,placer-sh,Kulwin (Koolwin),Australia,35-05S,142-45E,-35.08333333,142.75
+462,placer-sh,Kusipo,"Korea, Republic of",30-20N,126-30E,30.33333333,126.5
+463,placer-sh,Ky Khang,Vietnam,18-12N,106-05E,18.2,106.0833333
+465,placer-sh,Ky Ninh,Vietnam,18-00N,106-10E,18,106.1666667
+466,placer-sh,Long Hai,Vietnam,10-25N,107-10E,10.41666667,107.1666667
+467,placer-sh,Manavalakuruchi,India,08-12N,77-20E,8.2,77.33333333
+468,placer-sh,Massidon (Murray Basin),Australia,33-05S,141-15E,-33.08333333,141.25
+469,placer-sh,Matara,Sri Lanka,5-57N,80-32E,5.95,80.53333333
+470,placer-sh,Mataraca,Brazil,06-30S,35-00W,-6.5,-35
+471,placer-sh,Matarbari Island,Bangladesh,21-42N,91-53E,21.7,91.88333333
+473,placer-sh,Maxville,United States,29-55N,81-45W,29.91666667,-81.75
+474,placer-sh,Mi Tho,Vietnam,13-45N,109-15E,13.75,109.25
+475,placer-sh,Minninup,Australia,33-28S,115-34E,-33.46666667,115.5666667
+476,placer-sh,Moebase (Moebane),Mozambique,17-01S,38-29E,-17.01666667,38.48333333
+477,placer-sh,Moguiquel,Mozambique,15-23S,40-16E,-15.38333333,40.26666667
+478,placer-sh,Moreton Island,Australia,27-11S,153-24E,-27.18333333,153.4
+479,placer-sh,Mullaittivu,Sri Lanka,9-15N,80-48E,9.25,80.8
+481,placer-sh,Munmorah,Australia,33-12S,151-35E,-33.2,151.5833333
+482,placer-sh,Nabiac,Australia,32-00S,152-30E,-32,152.5
+483,placer-sh,Nanshanhai,China,21-32N,111-37E,21.53333333,111.6166667
+484,placer-sh,Naracoopa,Australia,39-55S,144-06E,-39.91666667,144.1
+485,placer-sh,Natchez Trace deposit,United States,35-50N,88-12W,35.83333333,-88.2
+486,placer-sh,Nayaru,Sri Lanka,9-08N,80-53E,9.133333333,80.88333333
+488,placer-sh,Newcastle,Australia,32-55S,151-45E,-32.91666667,151.75
+489,placer-sh,Newrybar,Australia,28-46S,153-34E,-28.76666667,153.5666667
+490,placer-sh,Nile Delta / Rosetta,Egypt,31-00N,31-00E,31,31
+491,placer-sh,North Camden (Kerr-McGee deposit),United States,36-07N,88-11W,36.11666667,-88.18333333
+492,placer-sh,North Stradbroke,Australia,27-35S,153-27E,-27.58333333,153.45
+493,placer-sh,North Stradbroke  - Yarraman,Australia,27-35S,153-27E,-27.58333333,153.45
+494,placer-sh,Old Hickory (Stony Creek),United States,34-12-21N,105-43-47W,34.20583333,-105.7297222
+496,placer-sh,Pebane district,Madagascar,17-09S,37-50E,-17.15,37.83333333
+497,placer-sh,Phan Thiet,Vietnam,10-38N,108-05E,10.63333333,108.0833333
+498,placer-sh,Pinkenba,Australia,27-26S,153-07E,-27.43333333,153.1166667
+499,placer-sh,Polkotuwa,Sri Lanka,6-29N,79-59E,6.483333333,79.98333333
+500,placer-sh,Porto Seguro District,Brazil,16-26S,39-05W,-16.43333333,-39.08333333
+501,placer-sh,"Prachuap Khiri Khan (Prajuab Kirikhan, Prachuab Kiri Khan)",Thailand,11-49N,99-49E,11.81666667,99.81666667
+502,placer-sh,Prado area,Brazil,17-24S,39-12W,-17.4,-39.2
+504,placer-sh,Pudavakattu,Sri Lanka,8-53N,81-05E,8.883333333,81.08333333
+505,placer-sh,Pulmoddai,Sri Lanka,08-57N,80-57E,8.95,80.95
+506,placer-sh,Puri,India,19-45N,85-25E,19.75,85.41666667
+507,placer-sh,Quang Ngan,Vietnam,16-38N,107-25E,16.63333333,107.4166667
+508,placer-sh,Quelemane,Mozambique,17-53S,36-51E,-17.88333333,36.85
+509,placer-sh,Rainbow Beach,Australia,25-54S,153-05E,-25.9,153.0833333
+511,placer-sh,Richards Bay,South Africa,28-42S,32-10E,-28.7,32.16666667
+512,placer-sh,Sai-Lao (Quoinghi),China,19-15N,110-36E,19.25,110.6
+513,placer-sh,Sandalwood,Australia,34-57S,140-08E,-34.95,140.1333333
+514,placer-sh,Sao Joao de Barra (Barra Sao Joao),Brazil,21-23S,41-03W,-21.38333333,-41.05
+515,placer-sh,Sao Mateus,Brazil,19-38S,40-53W,-19.63333333,-40.88333333
+516,placer-sh,Se Petiba,Brazil,22-32S,44-46W,-22.53333333,-44.76666667
+517,placer-sh,Serra (Jacareipe),Brazil,20-10S,39-20W,-20.16666667,-39.33333333
+519,placer-sh,Singkep,Indonesia,0-30S,104-25E,-0.5,104.4166667
+520,placer-sh,Stockton (Stockton Bight),Australia,32-50S,151-51E,-32.83333333,151.85
+521,placer-sh,Stratham South,Australia,33-28S,115-35E,-33.46666667,115.5833333
+522,placer-sh,Takua Pa,Thailand,8-53N,98-21E,8.883333333,98.35
+523,placer-sh,Teknaf,Bangladesh,20-52N,92-18E,20.86666667,92.3
+524,placer-sh,Tirrukkovil (Tirukkovil),Sri Lanka,7-07N,81-51E,7.116666667,81.85
+525,placer-sh,Tolagnaro,Madagascar,25-02S,47-00E,-25.03333333,47
+527,placer-sh,"Tomago (Newcastle, Clybucca)",Australia,32-48S,151-43E,-32.8,151.7166667
+528,placer-sh,Toscanini,Namibia,20-50S,13-25E,-20.83333333,13.41666667
+529,placer-sh,"Trail Ridge (Highland Trail Ridge, Starke Trail Ridge)",United States,30-02N,82-02W,30.03333333,-82.03333333
+530,placer-sh,Trivandrum,India,8-29N,76-55E,8.483333333,76.91666667
+531,placer-sh,Tungshanchow,Taiwan,23-34N,120-04E,23.56666667,120.0666667
+532,placer-sh,Ussangoda,Sri Lanka,6-46N,80-23E,6.766666667,80.38333333
+534,placer-sh,Viney Creek,Australia,32-37S,152-07E,-32.61666667,152.1166667
+535,placer-sh,Vinh Cam Ranh,Vietnam,11-53N,109-10E,11.88333333,109.1666667
+536,placer-sh,Vinh Mi (Vinh My),Vietnam,16-20N,107-45E,16.33333333,107.75
+537,placer-sh,Vitoria District,Brazil,18-22S,40-42W,-18.36666667,-40.7
+538,placer-sh,Vohibarika area,Madagascar,16-17S,48-59E,-16.28333333,48.98333333
+539,placer-sh,Waroona (Hamel),Australia,32-50S,115-55E,-32.83333333,115.9166667
+540,placer-sh,Waroona (Hamel),Australia,32-51S,115-55E,-32.85,115.9166667
+542,placer-sh,Wemen,Australia,34-55S,142-45E,-34.91666667,142.75
+543,placer-sh,"Westport (inclueds Nine Mile Beach, Carters Beach)",New Zealand,41-06S,171-24E,-41.1,171.4
+544,placer-sh,"WIM 150 (Drung South, CRA, Horsham)",Australia,36-43S,142-12E,-36.71666667,142.2
+545,placer-sh,Wonnerup,Australia,33-37S,115-25E,-33.61666667,115.4166667
+546,placer-sh,Wonnerup Beach,Australia,33-37S,115-25E,-33.61666667,115.4166667
+547,placer-sh,Wuzhaung (Baoding),China,18-43N,110-22E,18.71666667,110.3666667
+548,placer-sh,Yangjiang (Nanshanhai),China,,,21.6244,111.7194
+550,placer-sh,Yarloop,Australia,32-58S,115-54E,-32.96666667,115.9
+551,placer-sh,Yoganup (Yoganup Central),Australia,33-39S,115-33E,-33.65,115.55
+552,placer-sh,Yoganup Extended,Australia,33-36S,115-40E,-33.6,115.6666667
+553,placer-sh,Yoganup North (Boyanup),Australia,33-29S,115-44E,-33.48333333,115.7333333
+554,placer-sh,Zhanjiang district,China,21-12N,110-28E,21.2,110.4666667
+555,placer-al,Atlantida,Uruguay,35-12S,55-48W,-35.2,-55.8
+557,placer-al,Batang Berjuntai area,Malaysia,03-20N,101-30E,3.333333333,101.5
+558,placer-al,Bear Valley,United States,44-21N,115-24W,44.35,-115.4
+559,placer-al,Beihei District,China,21-29N,109-05E,21.48333333,109.0833333
+560,placer-al,Big Creek,United States,44-28N,115-59W,44.46666667,-115.9833333
+561,placer-al,Chamberlin District,United States,45-19N,115-07W,45.31666667,-115.1166667
+562,placer-al,Circle,United States,65-30N,144-45W,65.5,-144.75
+563,placer-al,Dianbai,China,21-33N,111-16E,21.55,111.2666667
+565,placer-al,El Dorado Creek area,United States,65-56N,166-12W,65.93333333,-166.2
+566,placer-al,Fortymile,United States,64-20N,142-00W,64.33333333,-142
+567,placer-al,Gold Fork-Little Valley,United States,44-41N,115-58W,44.68333333,-115.9666667
+568,placer-al,Heinze Basin,Burma,14-36N,98-03E,14.6,98.05
+569,placer-al,Horse Creek (Aiken County),United States,33-30N,81-54W,33.5,-81.9
+570,placer-al,Hot Springs,United States,65-10N,151-00W,65.16666667,-151
+571,placer-al,Iditarod,United States,62-30N,158-30W,62.5,-158.5
+573,placer-al,Janghowon,"Korea, Republic of",37-10N,127-30E,37.16666667,127.5
+574,placer-al,Jos Plateau,Nigeria,09-30N,08-00E,9.5,8
+575,placer-al,Kanbauk,Burma,14-36N,98-03E,14.6,98.05
+576,placer-al,Kinta Valley (Lahat),Malaysia,04-30N,101-10E,4.5,101.1666667
+577,placer-al,Kuala Lumpur area,Malaysia,03-00N,101-45E,3,101.75
+578,placer-al,Kwangsangun,"Korea, Republic of",35-10N,126-50E,35.16666667,126.8333333
+580,placer-al,Kyan Chaung,Burma,13-30N,98-20E,13.5,98.33333333
+581,placer-al,Madianhe,China,21-33N,111-16E,21.55,111.2666667
+582,placer-al,McGrath,United States,62-45N,155-00W,62.75,-155
+583,placer-al,Mogok,Burma,22-54-30N,96-30E,22.90833333,96.5
+584,placer-al,Mong Kung,Burma,21-37N,97-31-30E,21.61666667,97.525
+585,placer-al,Namdaecheon River (Muju area),"Korea, Republic of",35-00N,126-40E,35,126.6666667
+586,placer-al,Oak Grove,United States,36-23N,88-10W,36.38333333,-88.16666667
+588,placer-al,Pearsol Creek,United States,44-31N,116-05W,44.51666667,-116.0833333
+589,placer-al,Pitinga,Brazil,00-45S,60-07W,-0.75,-60.11666667
+590,placer-al,Port Clarence,United States,65-40N,166-30W,65.66666667,-166.5
+591,placer-al,Qinzhou (Qinxian),China,21-59N,108-36E,21.98333333,108.6
+592,placer-al,Ramey Meadows,United States,45-16N,115-11W,45.26666667,-115.1833333
+593,placer-al,Ranchi-Purulia,India,23-25N,86-00E,23.41666667,86
+594,placer-al,Rio Tercero,Argentina,32-02S,64-12W,-32.03333333,-64.2
+596,placer-al,Ruby Meadows,United States,64-25N,154-20W,64.41666667,-154.3333333
+597,placer-al,Sakagyi,Burma,22-55-58N,96-13E,22.93277778,96.21666667
+598,placer-al,Sao Gonçalo do Sapucai area,Brazil,21-56S,45-40W,-21.93333333,-45.66666667
+599,placer-al,Silica Mine,United States,36-02N,88-11W,36.03333333,-88.18333333
+600,placer-al,Soun-Miyang,"Korea, Republic of",36-55N,127-20E,36.91666667,127.3333333
+601,placer-al,Tolovana,United States,65-30N,148-10W,65.5,-148.1666667
+603,placer-al,Wan Hapalam,Burma,21-32N,97-18E,21.53333333,97.3
+604,placer-al,Xun Jiang,China,23-30N,110-50E,23.5,110.8333333
+605,placer-al,Yadanabon Mine,Burma,11-17-05N,99-17E,11.28472222,99.28333333
+606,placer-al,Yongsanpo,"Korea, Republic of",34-55N,126-40E,34.91666667,126.6666667
+607,placer-al,Yueyang,China,29-23N,113-06E,29.38333333,113.1
+608,placer-al,Zhanjiang,China,21-12N,110-28E,21.2,110.4666667
+609,placer-unc,Careacu,Brazil,22-02S,45-42W,-22.03333333,-45.7
+611,placer-unc,Chilka Lake,India,19-46N,85-20E,19.76666667,85.33333333
+612,placer-unc,Gaya,India,24-47N,85-00E,24.78333333,85
+613,placer-unc,Sanbagoma,Mauritania,15-35N,11-57W,15.58333333,-11.95
+614,placer-unc,Sinoe County,Liberia,5-20N,8-40W,5.333333333,-8.666666667
+615,placer-unc,Visakhapatnam,India,17-42N,83-18E,17.7,83.3
+616,placer-pal,Bald Mountain,United States,,,41.29467,-105.322
+617,placer-pal,Elliott Lake (Blind River)- Denison,Canada,46-29N,82-32W,46.48333333,-82.53333333
+619,placer-pal,Elliott Lake (Blind River)- Quirke-Panel,Canada,46-30N,82-38W,46.5,-82.63333333
+620,placer-pal,Elliott Lake (Blind River)- Stanleigh,Canada,46-24N,82-38W,46.4,-82.63333333
+621,placer-pal,Oak Grove,United States,36-23N,88-10W,36.38333333,-88.16666667
+622,phos,Abu Tartar,Egypt,25-26N,30-02E,25.43333333,30.03333333
+623,phos,Blackfoot Bridge,United States,42-07N,111-31W,42.11666667,-111.5166667
+624,phos,Bofal-Loubboira (Wadi Guellouar),Mauritania,16-25N,13-45W,16.41666667,-13.75
+626,phos,Caldwell Canyon,United States,42-44N,111-22W,42.73333333,-111.3666667
+627,phos,Champ,United States,42-40N,111-16W,42.66666667,-111.2666667
+628,phos,Conda,United States,42-44N,111-32W,42.73333333,-111.5333333
+629,phos,Gay and South Forty,United States,43-03N,112-07W,43.05,-112.1166667
+630,phos,Henry,United States,42-53N,111-28W,42.88333333,-111.4666667
+631,phos,Husky,United States,42-42N,111-15W,42.7,-111.25
+632,phos,Kunyang,China,24-40N,102-35E,24.66666667,102.5833333
+634,phos,Maybe Canyon (Maybie),United States,42-45N,111-18W,42.75,-111.3
+635,phos,Mountain Fuel,United States,42-39N,111-17W,42.65,-111.2833333
+636,phos,North Henry,United States,42-54N,111-30W,42.9,-111.5
+637,phos,Smoky Canyon,United States,42-43N,111-08W,42.71666667,-111.1333333
+638,phos,Swan Lake Gulch,United States,42-38N,111-25W,42.63333333,-111.4166667
+639,phos,Trail Creek,United States,42-44N,111-25W,42.73333333,-111.4166667
+640,phos,Wooley Valley,United States,42-50N,111-24W,42.83333333,-111.4
+642,phos,Xinhua,China,26-42N,105-45E,26.7,105.75
+643,phos,Zhijin,China,26-41N,105-37E,26.68333333,105.6166667
+644,oth-baux,Lake Innes,Australia,31-30S,152-53E,-31.5,152.8833333
+645,oth-baux,Xiuwen,China,26-51N,106-35E,26.85,106.5833333
+646,oth-f,Buffalo Fluorspar,South Africa,24-30S,28-30E,-24.5,28.5
+647,oth-f,Encantada-Buena Vista area,Mexico,28-30N,102-30W,28.5,-102.5
+649,oth-f,Fatima area,Mexico,28-33N,102-31W,28.55,-102.5166667
+650,oth-f,Gallinas Mountains,United States,34-12N,105-44W,34.2,-105.7333333
+651,oth-f,Snowbird,United States,,,46.78405,-114.77014
+652,oth-u,Agnew Lake,Canada,,,46.42919,-81.6309
+653,oth-u,Bancroft-Haliburton  area,Canada,45-30N,77-30W,45.5,-77.5
+654,oth-u,Eagle Creek,United States,64-42N,162-46W,64.7,-162.7666667
+655,oth-u,Mary Kathleen,Australia,20-44S,140-01E,-20.73333333,140.0166667
+657,oth-u,McArthur River,Canada,57-45N,106-00W,57.75,-106
+658,oth-u,Port Pirie (Radium Hill),Australia,33-12S,138-00E,-33.2,138
+659,oth-unc,Alto Ligonha,Mozambique,15-45S,39-00E,-15.75,39
+660,oth-unc,Boorama,Somalia,10-03N,43-05E,10.05,43.08333333
+661,oth-unc,Jabal Ar Rabuts,Saudi Arabia,25-35N,41-03E,25.58333333,41.05
+662,oth-unc,Jabal Awja,Saudi Arabia,25-50N,41-01E,25.83333333,41.01666667
+663,oth-unc,Jabal Ebed,Saudi Arabia,25-57N,40-53E,25.95,40.88333333
+665,oth-unc,Jabal Kuara,Saudi Arabia,25-47N,40-55E,25.78333333,40.91666667
+666,oth-unc,Little Friar Mountain,United States,37-46N,79-06W,37.76666667,-79.1
+667,oth-unc,Marhuanta,Venezuela,7-05N,63-31W,7.083333333,-63.51666667
+668,oth-unc,Moshikeng,China,29-55N,121-15E,29.91666667,121.25
+669,oth-unc,San Antonio,Venezuela,7-44-35N,63-34-30W,7.743055556,-63.575
+670,oth-unc,Sanlangyan,China,29-39N,112-47E,29.65,112.7833333
+672,oth-unc,Saulia,Congo (Zaire),02-55S,25-45E,-2.916666667,25.75
+673,oth-unc,Taohualashan,China,39-00N,101-20E,39,101.3333333
+674,oth-unc,Wadi el Sahrm,Egypt,24-44N,35-01E,24.73333333,35.01666667
+675,oth-unc,Wuzhou,China,23-29N,111-19E,23.48333333,111.3166667
+676,oth-unc,Xing'an,China,45-10N,120-30E,45.16666667,120.5
+677,oth-unc,Ytterby Mine,Sweden,59-26N,18-20E,59.43333333,18.33333333
