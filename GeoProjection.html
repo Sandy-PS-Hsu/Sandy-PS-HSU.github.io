@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Geo Projection</title>
+    <script src="https://d3js.org/d3.v7.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-array@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-geo@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-geo-projection@4"></script>
+    <script src="https://d3js.org/d3-geo-projection.v4.min.js"></script>
+
+    <style>
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 13px;
+            color: #333;
+            background-color:#DAEBF9
+        }
+        .grid line {
+            stroke: lightgrey;
+            stroke-opacity: 0.2;
+            shape-rendering: crispEdges;
+        }
+
+        .grid path {
+            stroke-width: 0;
+        }
+
+        div.tooltip {
+            position: absolute;
+            text-align: center;
+            width: 60px;
+            height: 28px;
+            padding: 2px;
+            font: 12px sans-serif;
+            background: lightsteelblue;
+            border: 0px;
+            border-radius: 8px;
+            pointer-events: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+<pre id = "para">
+        <p id ='p1'><b>            A little of background on rare earth metal:</b></p>
+                "Seventeen elements in the periodic table, also called “rare earths”, play a major role in the calculations and strategies of various nations.
+                They are vital to key products from hi-tech items (smartphones and monitors) to energy conversion systems (wind turbines, photovoltaic panels
+                and electrical machinery) and even military equipment (lasers and radar).
+
+                Among their many possible applications, some of these metals (for instance, indium and gallium) are important for the production of semiconductors,
+                which represent a foundation of today's high-tech industries.  The last few years seeing shortage among semi-conductor industries has high-lighted
+                how a disruption on the supply of integrated circuits would hugely impact global economies.  The rare earth metals have been viewed as strategic
+                metal resources because of the difficulties involved in replacing them with alternative materials and great effort involved in mining and refining
+                them into usable form.
+
+                The global supply chain of rare earth metal are dominated by China, which produces some 60% of the world’s rare earths, processes and refines
+                around 80%, and is the central player in the global supply chain. When a strategic resource is monopolized by a single country, it would be
+                utilized as bargaining chip to achieve political means as we can see from 2010 and recent year that China has threaten to withhold supply to Japan
+                and USA as form of trade ban or retaliation.  Given these incidents, many countries are beginning to look for alternative resources and decrease
+                their dependency on single supplier."
+
+                Here are the list of metals just for reference:
+                lanthanum (La), cerium (Ce), praseodymium (Pr), neodymium (Nd), promethium (Pm), samarium (Sm), europium (Eu), gadolinium (Gd), terbium (Tb),
+                dysprosium (Dy), holmium (Ho), erbium (Er), thulium (Tm), ytterbium (Yb), lutetium (Lu), scandium (Sc), and yttrium (Y).
+</pre>
+<pre id = 'para5' style = font-style:italic;>
+
+          <b>HYPOTHESIS:</b>
+</pre>
+
+<pre id ='para2' style = font-style:italic >
+                <b>Given unstable supply chain on a key resources that would impact an enormous amount of industries not just in one nation, but globally,
+                the best interest of countries being impacted the most would be forming strategic alliances and increase the mining production.
+                Given this topic has been raised many years, I would assume the output of each country that have mining sites would increase the production
+                steadily with incentives that buyers are interested to minimize the dependencies of single source.  Other countries like Japan who doesn't
+                involve in actual mining would also invest in those countries to help with production in order to secure a portion of rare element mineral output .</b>
+</pre>
+<br>
+<br>
+<br>
+<br>
+<div>
+    <svg width="1300" height="950"></svg>
+</div>
+<br>
+<div id = "colortable"></div>
+<br>
+<br>
+<pre id = "para3" >
+
+
+    Conclusion:
+
+    Not many countries showing exciting upward trends except USA and Thailand.  It is understandable for USA to catch
+    up on mining production since 2017 as USA is trying to reestablish semiconductor industries.  Australia was the
+    2nd largest in production before the rise of Burma and USA, but the overall trend for last 7 years is pretty flat.
+    Burma's production declined in recent year could be due to political instability because of the military coup.
+    Overall, the production of most of the countries staggered and there could be environmental or political factors
+    influencing the output each year that need to be examined further.
+
+</pre>
+
+<pre id ='para4'>
+    Resources:
+
+    The U.S. Geological Survey
+    <a href=https://www.usgs.gov/centers/national-minerals-information-center/rare-earths-statistics-and-information target="_blank">https://www.usgs.gov/centers/national-minerals-information-center/rare-earths-statistics-and-information</a>
+</pre>
+<br>
+
+<script>
+
+    d3.select("#para2")
+        .style('font-size', '13px')
+    d3.select('#para5')
+        .attr("font-weight", '900px')
+        .style("font-size", '15px')
+    d3.select('#p1')
+        .style("font-size", '14px')
+
+
+    let svg = d3.select("svg"),
+        width = +svg.attr("width"),
+        height = +svg.attr("height");
+
+    const config = {
+        speed: 0.010,
+        verticalTilted: 0,
+        horizontalTilted: 0
+    }
+    // Define the div for the tooltip
+    let div = d3.select("body").append("div")
+        .attr("id", "tooltip")
+        .attr("class", "div.tooltip")
+        .style("opacity", 0);
+
+
+    // The orthographic Earth projection
+    // Center(0,0) and no rotation
+    let projection = d3.geoMercator()
+        .center([0, 0])
+        .scale(150)
+        .clipAngle(0)
+        .translate([width / 2, height / 2])
+        //.rotate([0,0])
+
+
+    const path = d3.geoPath().projection(projection)
+
+    let graticule = d3.geoGraticule();
+    let g1 = svg.append("g");
+
+    let symbolGenerator = d3.symbol()
+        .type(d3.symbolDiamond)
+        .size(10);
+    // Calling rotate() function for rotation of globe
+    // Rotate();
+    let pathData = symbolGenerator();
+
+    let colorscheme = ['#210e4d','#2a3971','#3f618f','#638aa9',
+    '#93b2c2', '#cadade','#95c2c6','#62aba4','#359279','#167847','#0f5d0c'];
+    let colorscheme5 = ['#1a0b3c','#657196','#90A3B6','#84b0c0','#288188','#F08080'];
+    let colorscheme51 =['#2f356c','#9c719b','#f4bece','#ffa299','#fd9949']
+
+    let usares = '1.8 million Metric Ton in reserve';
+
+
+
+    let texdiv= d3.select("body").append("div")
+        .style("position", "absolute")
+        .style("text-aling", "center")
+        .style("width", "240px")
+        .style("height", "2.5em")
+        .style('font', 'calibri')
+        .style('color', 'white')
+        .style("background", "black")
+        .style('border-radius', '8px')
+        .style('border', 'white')
+        .style('display','none')
+
+
+
+    // Loading data from json
+    d3.json("countries.geojson").then(function(data) {
+
+
+        // mouse event
+        let mouseOver = function(d) {
+            d3.selectAll("path")
+                .transition()
+                .duration(200)
+                .style("opacity", .5)
+            d3.select(this)
+                .transition()
+                .duration(200)
+                .style("opacity", 1)
+                .style("stroke", "black")
+        }
+
+        let mouseLeave = function(d) {
+            d3.selectAll("path")
+                .transition()
+                .duration(200)
+                .style("opacity", .8)
+            d3.select(this)
+                .transition()
+                .duration(200)
+                .style("stroke", "transparent")
+        }
+
+
+
+        // Draw the map
+        g1.selectAll("path")
+                .data(data.features)
+                .enter().append("path")
+                .attr("d", d3.geoPath()
+                    .projection(projection)
+                )
+                .style("stroke", "#616161")
+                    .attr("fill", function(d ,i) {
+
+
+                        //if (d.properties.ISO_A3 == 'CAN') return colorscheme[8];
+                        //else if (d.properties.ISO_A3 == 'USA') return colorscheme[5];
+                        //else if (d.properties.ISO_A3 == 'CHN') return colorscheme[0];
+                        //else if (d.properties.ISO_A3== 'BRA') return colorscheme[2];
+                        //else if (d.properties.ISO_A3 == 'RUS') return colorscheme[2];
+                       //else if (d.properties.ISO_A3 == 'VNM') return colorscheme[1];
+                       //else if (d.properties.ISO_A3== 'IND') return colorscheme[3];
+                       //else if (d.properties.ISO_A3 == 'AUS') return colorscheme[4];
+                      // else if (d.properties.ISO_A3== 'GRL') return colorscheme[6];
+                       //else if (d.properties.ISO_A3== 'TZA') return colorscheme[7];
+                        //else if (d.properties.ISO_A3 == 'ZAF') return colorscheme[9];
+
+                        if (d.properties.ISO_A3 == 'CAN') return colorscheme5[4];
+                        else if (d.properties.ISO_A3 == 'USA') return colorscheme5[3];
+                        else if (d.properties.ISO_A3 == 'CHN') return colorscheme5[0];
+                        else if (d.properties.ISO_A3== 'BRA') return colorscheme5[1];
+                        else if (d.properties.ISO_A3 == 'RUS') return colorscheme5[1];
+                        else if (d.properties.ISO_A3 == 'VNM') return colorscheme5[1];
+                        else if (d.properties.ISO_A3== 'IND') return colorscheme5[2];
+                        else if (d.properties.ISO_A3 == 'AUS') return colorscheme5[2];
+                        else if (d.properties.ISO_A3== 'GRL') return colorscheme5[3];
+                        else if (d.properties.ISO_A3== 'TZA') return colorscheme5[4];
+                        else if (d.properties.ISO_A3 == 'ZAF') return colorscheme5[4];
+                        else if (d.properties.ISO_A3 == 'MMR' || d.properties.ISO_A3 == 'BDI'
+                        || d.properties.ISO_A3 == 'MDG' || d.properties.ISO_A3 == 'THA') return '#3A2A2A';
+
+
+
+
+                      else return "#dcb"
+        })
+            .on('mouseover', mouseOver)
+            .on('mouseleave', mouseLeave)
+
+
+       g1.append("path")
+            .datum(graticule)
+            .attr("class", "graticule")
+            .attr("d", path)
+            .style("stroke-dasharray", ("15,1"))
+            .style("fill-opacity", 0)
+            .style("stroke-opacity", 20)
+            .style("stroke-width", 0.25)
+            .style("stroke", "#D6D6D6"); //D6D6D6
+
+
+
+
+        //d3.json("https://raw.githubusercontent.com/johan/world.geo.json/master/countries/GRL.geo.json")
+            //.then(function(data) {
+                //g.selectAll("path")
+                    //.data(data.features)
+                    //.attr("d", d3.geoPath())
+                    //.attr("fill", "red")
+                    //.style("stroke", "red")
+                    //.style("stroke-width", "6")
+
+
+            //})
+
+       d3.csv("minelocation.csv").then(function(d) {
+          console.log(d);
+          g1.selectAll("path")
+              .data(d)
+              .enter()
+               .append("path")
+              .attr("d", pathData)
+               .style("fill", "#F08080")
+              .attr("transform", function(d) {
+                   return "translate(" + projection([
+                       +d.longitude,
+                       +d.latitude
+                   ]) + ")";
+                })
+        });
+
+
+       })
+
+
+
+
+    let zoom = d3.zoom()
+        .scaleExtent([1, 1.5])
+       .translateExtent([[0, 0], [width-200, height-200]])
+       .on('zoom', handleZoom);
+
+
+    function handleZoom(e) {
+        d3.select('svg')
+            .attr('transform', e.transform)}
+
+
+    d3.select('svg')
+        .call(zoom);
+
+
+
+
+    // Function to rotate() projection of globe.
+   // function Rotate() {
+        //d3.timer(function (elapsed) {
+            //projection.rotate(
+              //  [config.speed * elapsed -120,
+                   // config.verticalTilted-10,
+                  //  config.horizontalTilted]);
+          //  svg.selectAll("path").attr("d", path);
+
+        //});
+    //}
+
+
+
+    //Scatter----------------------------------------------------------------
+
+
+
+    const margin = {top: 30, right: 150, bottom: 140, left: 125};
+    widthsc = 350 //- margin.left - margin.right,
+    heightsc = 250 //- margin.top - margin.bottom;
+
+
+
+    var div1 = d3.select("body")
+        .append("div")
+        .attr("class", "tooltip")
+        .style("opacity", 0);
+    // append the svg object to the body of the page
+    let svgsc = d3.select("body")
+        .append("svg")
+        .attr("width", widthsc+ margin.left + margin.right)
+        .attr("height", heightsc + margin.top + margin.bottom)
+        .style("background", "#52473C")
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+
+
+    // A color scale: one color for each group
+
+    // Add X axis --> it is a date format
+    const x1 = d3.scaleLinear()
+        .range([ 0, widthsc ])
+
+
+
+    const y1 = d3.scaleLinear()
+        .range([ heightsc, 0 ]);
+
+
+    const line1 = d3.line()
+        .x(d => x1(+d.Year))
+        .y(d => y1(+d.value))
+
+
+
+
+    //Read the data
+    d3.csv("mineproductionmajor.csv").then(function(data) {
+
+
+        // List of groups (here I have one group per column)
+        let allGroup = ["United States", "Australia", "Burma",
+            "China"];
+
+        // Reformat the data: we need an array of arrays of {x, y} tuples
+        const dataReady = allGroup.map( function(grpName) { // .map allows to do something for each element of the list
+            return {
+                Country: grpName,
+                values: data.map(function(d) {
+
+                    return {Year: d.Year, value: +d[grpName]};
+                })
+            };
+        });
+
+        // I strongly advise to have a look to dataReady with
+        //console.log(dataReady)
+
+
+        const myColor = d3.scaleOrdinal()
+            .domain(allGroup)
+            .range(d3.schemeSet2);
+
+
+        x1.domain(d3.extent(data, function(d) {
+            return d.Year; }));
+        y1.domain( [0,180]);
+
+// X-axis
+        svgsc.append("g")
+            .attr("transform", "translate(0," + 280 + ")")
+            .call(d3.axisBottom(x1).tickFormat((d, i) => ['2015', '2016', '2017', '2018', '2019', '2020', '2021'][.5*i]))
+            .attr("font-weight", "500")
+            .style("font-size", "13px")
+            .style("font-family", "Calibri")
+            .style('color', 'white')
+
+        svgsc.append("text")
+            .attr("transform", "translate(" + (widthsc / 2) + " ," + (360) + ")")
+            .style("text-anchor", "middle")
+            .text("Global Rare Earth Metal Production From Key Players During Year 2015 and 2021")
+            .attr("font-weight","700")
+            .style("font-size", "17px")
+            .style("font-family", "Calibri")
+            .style("fill", 'white')
+
+// y grid line
+        svgsc.append("g")
+            .attr("transform", "translate(0," + 30 + ")")
+            .attr("class", "grid")
+            .call(d3.axisLeft(y1)
+                .ticks(10)
+                .tickSize(-350)
+                .tickFormat("")
+            )
+            .style('stroke-width', '1')
+
+
+
+        // Add Y axis
+
+        svgsc.append("g")
+            .attr("transform", "translate(0," + 30 + ")")
+            .call(d3.axisLeft(y1))
+            .attr("font-weight", "500")
+            .style("font-size", "13px")
+            .style("font-family", "Calibri")
+            .style('color', 'white')
+
+
+
+
+        svgsc.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", -65)
+            .attr("x",0 - 150)
+            //.attr("dy", "2em")
+            .style("text-anchor", "middle")
+            .text("Mining Production in Unit 1000 Metric Tons")
+            .style('fill', 'white')
+            .attr("font-weight","700")
+            .style("font-size", "15px")
+            .style("font-family", "Calibri")
+
+
+
+        // Add the lines
+
+        svgsc.selectAll("myLines")
+            .data(dataReady)
+            .join("path")
+            .attr("transform", "translate(0," + 30 + ")")
+            .attr("d", d => line1(d.values))
+            .attr("stroke", d => myColor(d.Country))
+            .style("stroke-width", 2)
+            .style("fill", "none")
+
+
+        // Add the points
+        svgsc
+            //First we need to enter in a group
+            .selectAll("myDots")
+            .data(dataReady)
+            .join('g')
+            .style("fill", d => myColor(d.Country))
+            //Second we need to enter in the 'values' part of this group
+            .selectAll("myPoints")
+            .data(d => d.values)
+            .join("circle")
+            .attr("r", 3)
+            .attr("transform", "translate(0," + 30 + ")")
+            .attr("stroke", "white")
+            .attr("cx", d => x1(d.Year))
+            .attr("cy", d => y1(d.value))
+            .on("mouseover", function(d) {
+                div1.transition()
+                    .duration(200)
+                    .style("opacity", .9);
+                div1.html(y1(d.value))
+                    .style("left", (d3.event.pageX) + "px")
+                    .style("top", (d3.event.pageY - 28) + "px");
+            })
+            .on("mouseout", function(d) {
+                div1.transition()
+                    .duration(500)
+                    .style("opacity", 0);
+            });
+
+
+        // Add a legend at the end of each line
+        svgsc
+            .selectAll("myLabels")
+            .data(dataReady)
+            .join('g')
+            .append("text")
+            .datum(d => { return {Country: d.Country, value: d.values[d.values.length - 1]}; }) // keep only the last value of each time series
+            .attr("transform",d => `translate(${x1(d.value.Year)},${y1(d.value.value)+30})`) // Put the text at the position of the last point
+            .attr("x", function(d, i){
+                if (i==3) return 10;
+                else return 12
+            }) // shift the text a bit more right
+            .attr("y", function(d, i){
+                if (i==2) return -10
+            })
+            .text(d => d.Country)
+            .style("fill", 'white')
+            .style("font-size", 13)
+            .style("font-family", "Calibri")
+
+
+
+
+
+
+
+    })
+    //-----------------------------------2nd Graph---------------------------------------------------------
+
+
+
+    var div2 = d3.select("body")
+        .append("div")
+        .attr("class", "tooltip")
+        .style("opacity", 0);
+
+
+    const svgsc2 = d3.select("body")
+        .append("svg")
+
+        .attr("width", widthsc + margin.left + margin.right)
+        .attr("height", heightsc + margin.top + margin.bottom)
+        .style("background", "#52473c")
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+
+
+
+    // Add X axis --> it is a date format
+    const x = d3.scaleLinear()
+        .range([ 0, widthsc ])
+
+
+
+    const y = d3.scaleLinear()
+        .range([ heightsc, 0 ]);
+
+    const line = d3.line()
+        .x(d => x(+d.Year))
+        .y(d => y(+d.value))
+
+    //Read the data
+    d3.csv("mineproduction.csv").then(function(data) {
+
+
+        // List of groups (here I have one group per column)
+        const allGroup = ["Brazil", "Burundi", "India",
+            "Russia", "Madagascar", "Thailand", "Vietnam"];
+
+
+        // Reformat the data: we need an array of arrays of {x, y} tuples
+        const dataReady = allGroup.map( function(grpName) { // .map allows to do something for each element of the list
+            return {
+                Country: grpName,
+                values: data.map(function(d) {
+
+                    return {Year: d.Year, value: +d[grpName]};
+                })
+            };
+        });
+
+        // I strongly advise to have a look to dataReady with
+        //console.log(dataReady)
+
+        const myColor = d3.scaleOrdinal()
+            .domain(allGroup)
+            .range(d3.schemeSet3);
+
+        x.domain(d3.extent(data, function(d) {
+            return d.Year; }));
+        y.domain( [0,10]);
+
+        d3.axisLeft(y).ticks(10);
+        // add the Y gridlines
+        svgsc2.append("g")
+            .attr("transform", "translate(0," + 30 + ")")
+            .attr("class", "grid")
+            .call(d3.axisLeft(y)
+                .ticks(10)
+                .tickSize(-350)
+                .tickFormat("")
+            )
+            .style('stroke-width', '1')
+
+
+// X-axis
+        svgsc2.append("g")
+            .attr("transform", "translate(0," + 280 + ")")
+            .call(d3.axisBottom(x).tickFormat((d, i) => ['2015', '2016', '2017', '2018', '2019', '2020', '2021'][.5*i]))
+            .attr("font-weight", "500")
+            .style("font-size", "13px")
+            .style("font-family", "Calibri")
+            .style('color', 'white');
+
+
+
+
+        svgsc2.append("text")
+            .attr("transform", "translate(" + (widthsc / 2) + " ," + (360) + ")")
+            .style("text-anchor", "middle")
+            .text("Global Rare Earth Metal Production From Other Players During Year 2015 and 2021")
+            .attr("font-weight","700")
+            .style("font-size", "17px")
+            .style("font-family", "Calibri")
+            .style('fill', 'white')
+
+        // Add Y axis
+
+        svgsc2.append("g")
+            .attr("transform", "translate(0," + 30 + ")")
+            .call(d3.axisLeft(y))
+            .attr("font-weight", "500")
+            .style("font-size", "13px")
+            .style("font-family", "Calibri")
+            .style('color', 'white');
+
+        svgsc2.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", -50)
+            .attr("x",0 - 150)
+            //.attr("dy", "2em")
+            .style("text-anchor", "middle")
+            .text("Mining Production in Unit 1000 Metric Tons")
+            .attr("font-weight","700")
+            .style("font-size", "15px")
+            .style("font-family", "Calibri")
+            .style('fill', 'white')
+
+
+
+        // Add the lines
+
+        svgsc2.selectAll("myLines")
+            .data(dataReady)
+            .join("path")
+            .attr("transform", "translate(0," + 30 + ")")
+            .attr("d", d => line(d.values))
+            .attr("stroke", d => myColor(d.Country))
+            .style("stroke-width", 2)
+            .style("fill", "none")
+
+        //Add the points
+        svgsc2
+            //First we need to enter in a group
+            .selectAll("myDots")
+            .data(dataReady)
+            .join('g')
+            .style("fill", d => myColor(d.Country))
+            // Second we need to enter in the 'values' part of this group
+            .selectAll("myPoints")
+            .data(d => d.values)
+            .join("circle")
+            .attr("cx", d => x(d.Year))
+            .attr("cy", d => y(d.value))
+            .attr("r", 3)
+            .attr("transform", "translate(0," + 30 + ")")
+            .attr("stroke", "white")
+            .on("mouseover", function(d) {
+                div2.transition()
+                    .duration(200)
+                    .style("opacity", .9);
+                div2.html(d.value + "<br/>")
+                    .style("left", (d3.event.pageX) + "px")
+                    .style("top", (d3.event.pageY - 40) + "px");
+            })
+            .on("mouseout", function(d) {
+                div2.transition()
+                    .duration(500)
+                    .style("opacity", 0);
+            });
+
+
+        // Add a legend at the end of each line
+        svgsc2
+            .selectAll("myLabels")
+            .data(dataReady)
+            .join('g')
+            .append("text")
+            .datum(d => { return {Country: d.Country, value: d.values[d.values.length - 1]}; }) // keep only the last value of each time series
+            .attr("transform",d => `translate(${x(d.value.Year)},${y(d.value.value)+30})`) // Put the text at the position of the last point
+            .attr("x", function(d,i) {
+                return 15
+            })
+            // shift the text a bit more right
+            .attr("y", function(d, i){
+                if (i==4) return -10
+                else if (i==2) return -8
+                else if (i==0) return -10
+                else if (i==1) return 8
+            })
+            .text(d => d.Country)
+            .style("fill", 'white')
+            .style("font-size", 13)
+            .style("font-family", "Calibri");
+
+
+
+
+
+    })
+
+    let Svgc = d3.select("#colortable").append("svg")
+        .attr("width", '1200')
+        .attr("height", '240')
+        //.style("background", "#dcb")
+        .append("g")
+        //.attr("transform", "translate(" + margin.left-10 + "," + margin.top-100 + ")");
+
+    // create a list of keys
+    var keys = ["Group 1: Only China in this group. Reserve as of 2021 is 44 million metric tons.",
+                "Group 2: Include Vietnam, Russia and Brazil. Reserve as of 2021 is ranging from 21-22 million metric.",
+        "Group 3: Include India and Australia.  Reserve as of 2021 is ranging from 4-7 million metric tons.",
+        "Group 4: Include USA and Greenland.  Reserve as of 2021 is ranging from 1.5-2 million metric tons.",
+        "Group 5: Include Tanzania, Canada and South Africa.  Reserve as of 2021 is less than 1 million metric tons.",
+        'Location of current and potential mining sites'
+    ]
+
+    // Usually you have a color scale in your chart already
+
+    // Add one dot in the legend for each name.
+    Svgc.selectAll("mydots")
+        .data(colorscheme5)
+        .enter()
+        .append("circle")
+        .attr("cx", 300)
+        .attr("cy", function(d,i){ return 15 + i*40}) // 100 is where the first dot appears. 25 is the distance between dots
+        .attr("r", 13)
+        .style("fill", function(d, i){ return colorscheme5[i]})
+
+    // Add one dot in the legend for each name.
+    Svgc.selectAll("mylabels")
+        .data(keys)
+        .enter()
+        .append("text")
+        .attr("x", 330)
+        .attr("y", function(d,i){ return 15 + i*40}) // 100 is where the first dot appears. 25 is the distance between dots
+        .style("fill", function(d, i){
+            return colorscheme5[i]})
+        .text(function(d, i){ return keys[i]})
+        .attr("text-anchor", "left")
+        .style("alignment-baseline", "middle")
+        .style("font", "calibri")
+        .style("font-size", '14px')
+        .attr("font-weight", "150px")
+
+
+</script>
+
+
+
+</script>
+</body>
+</html>
