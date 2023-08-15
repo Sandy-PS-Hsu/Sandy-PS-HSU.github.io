@@ -39,12 +39,13 @@
         </pre>
 
     </div>
-    <div id="tool" ></div>
     <div id="legdiv">
 
         <svg id="legend"></svg>
     </div>
+    <div id="tool" ></div>
     <div id = "chart"></div>
+
 </body>
     <script>
         const nodes = [{ id : 0, names: 'Missoula', transport: 0, NodeP: 0,  loc: 'MT, USA', airport: 'MSO'},
@@ -161,7 +162,7 @@
                 .style("width", 1000)
                 .style("height", 850)
                 .attr("preserveAspectRatio", "xMinYMin meet")
-                .attr("viewBox", "0 0 1750 1750")
+                .attr("viewBox", "0 0 2200 2200")
                 .classed('svg-content-responsive', true)
                 .style('background-color', svgBackgroundColor)
                 .append('g')
@@ -181,7 +182,7 @@
                     .style("border-width", "4px")
                     .style("border-radius", "4px")
                     .style("border-color", "#70002e")
-                    .style("padding", "20px")
+                    .style("padding", "15px")
 
 
 
@@ -350,19 +351,19 @@
 
         d3.select("#legdiv")
             .style("width", "1000px")
-            .style("height", "200px")
+            .style("height", "125px")
             .style('background-color', svgBackgroundColor)
         const SVG = d3.select("#legend")
             .style("width", "1000px")
-            .style("height", "200px")
+            .style("height", "125px")
         const size = 10
         SVG.selectAll("mydots")
             .data(keys)
             .enter()
             .append("circle")
             .attr("cx", 800)
-            .attr("cy", function(d,i){ return 20 + i*(size+30)}) // 100 is where the first dot appears. 25 is the distance between dots
-            .attr("r", 8)
+            .attr("cy", function(d,i){ return 15 + i*(size+15)}) // 100 is where the first dot appears. 25 is the distance between dots
+            .attr("r", 7)
             .attr("fill", circleBackground)
             .attr("stroke", function(d, i){return colorCont[i];})
             .attr("stroke-width", 4)
@@ -374,11 +375,11 @@
             .enter()
             .append("text")
             .attr("x", 815)
-            .attr("y", function(d,i){ return 20 + i*(size+30)}) // 100 is where the first dot appears. 25 is the distance between dots
+            .attr("y", function(d,i){ return 15 + i*(size+15)}) // 100 is where the first dot appears. 25 is the distance between dots
             .style("fill", function(d, i){ return colorCont[i]})
             .text(function(d){ return d})
             .style("font-family", fontFamily)
-            .style("font-size", "1.05em")
+            .style("font-size", "0.95em")
             .style("font-weight", "bold")
             .attr("text-anchor", "left")
             .style("alignment-baseline", "middle")
