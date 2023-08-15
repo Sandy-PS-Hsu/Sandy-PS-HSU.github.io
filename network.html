@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Network Arc Diagram</title>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Assistant&display=swap" rel="stylesheet">
+    <style>
+        body {
+
+            background-color:#0a1412
+        }
+
+    </style>
+</head>
+<body>
+    <div id="text">
+        <pre id = "para">
+        <p id ='p1'><b>   Travelling from Missoula to 12 World Wonders</b></p>
+                Background:
+
+                        I am always interested in architectural monuments that were constructed centuries or millenniums ago.
+                        My friend and I was talking if we should go to one of the world wonders next year and I thought it would
+                        be great to map out the flight cost and travelling time of each destination on a network graph to show
+                        1. how far each destination is from Missoula
+                        2. Air fare of each destination from Missoula
+                        3. Air fare and total travelling time from destination to destination in the same region or thru
+                            intercontinental travel
+
+
+                Hypothesis:
+
+                        Without looking at any data, Petra (Jordan) and Machu Picchu (Peru) are the ones that would be most
+                        difficult to get to in terms of flight cost and total time travelled based on their geographic locations
+                        and past discussions with friends who had travelled to some of the wonders.
+
+
+
+        </pre>
+
+    </div>
+    <div id="tool" ></div>
+    <div id="legdiv">
+
+        <svg id="legend"></svg>
+    </div>
+    <div id = "chart"></div>
+</body>
+    <script>
+        const nodes = [{ id : 0, names: 'Missoula', transport: 0, NodeP: 0,  loc: 'MT, USA', airport: 'MSO'},
+            { id : 1, names: 'Stonehenge', transport: 14.5, NodeP: 1100, loc: 'Salisbury, UK', airport: 'LHR'},
+            { id : 2, names: 'Chichen Itza', transport: 15, NodeP: 900, loc: 'Yucatan, Mexico', airport: 'MID'},
+            { id : 3, names: 'Colosseum', transport: 19, NodeP: 1600, loc: 'Rome, Italy', airport: 'FCO'},
+            { id : 4, names: 'Redeemer', transport: 20, NodeP: 1200, loc: 'Rio de Janeiro, Brazil', airport: 'SDU'},
+            { id : 5, names: 'Acropolis', transport: 21.5, NodeP: 1800, loc: 'Athens, Greece', airport: 'ATH'},
+            { id : 6, names: 'Great Pyramid', transport: 24, NodeP: 1400, loc: 'Algiza Desert, Egypt', airport: 'CAI'},
+            { id : 7, names: 'Machu Picchu', transport: 27, NodeP: 1500, loc: 'Cuscos, Peru', airport: 'CUZ'},
+            { id: 8, names: 'Petra', transport: 28, NodeP: 2700, loc: 'Ma`ah, Jordan', airport: 'AQJ'},
+            { id : 9, names: 'Angkor Wat', transport: 29.5, NodeP: 3400, loc: 'Siem Reap, Cambodia', airport: 'REP'},
+            { id : 10, names: 'Taj Mahal', transport: 30.5, NodeP: 2300, loc: 'Agra, India', airport: 'DEL'},
+            { id : 11, names: 'Potala Palace', transport: 34, NodeP: 4000, loc: 'Tibet', airport: 'LXA'}];
+
+
+        const links = [
+            {source: 0, target: 1, price: 1100, hours: 13, local: 1.5},
+            {source: 0, target: 2, price: 900, hours: 12.5, local: 2.5},
+            {source: 0, target: 3, price: 1600, hours: 18, local: 1},
+            { source: 0, target: 4, price: 1200, hours: 19, local: 1},
+            { source: 0, target: 5, price: 1800, hours: 20, local: 1.5},
+            { source: 0, target: 6, price: 1400, hours: 23, local: 1},
+            { source: 0, target: 7, price: 1500, hours: 22, local: 5},
+            { source: 0, target: 8, price: 2700, hours: 26, local: 2},
+            { source: 0, target: 9, price: 3400, hours: 29, local: 0.5},
+            { source: 0, target: 10, price: 2300, hours: 30, local: 0.5},
+            { source: 0, target: 11, price: 4000, hours: 33, local: 1},
+            { source: 10, target: 9, price: 500, hours: 8, local: 0.5},
+            { source: 10, target: 11, price: 1200, hours: 17, local: 1},
+            { source: 9, target: 11, price: 500, hours: 14, local: 1},
+            { source: 10, target: 6, price: 500, hours: 7, local: 1},
+            { source: 6, target: 8, price: 215, hours: 5, local: 2},
+            { source: 8, target: 5, price: 600, hours: 5, local: 1.5},
+            { source: 6, target: 5, price: 170, hours: 2, local: 1.5},
+            { source: 5, target: 1, price: 300, hours: 4, local: 1.5},
+            { source: 6, target: 1, price: 400, hours: 5, local: 1.5},
+            { source: 1, target: 4, price: 900, hours: 16, local: 1},
+            { source: 1, target: 2, price: 1800, hours: 15, local: 2.5},
+            { source: 2, target: 7, price: 900, hours: 12, local: 5},
+            { source: 2, target: 4, price: 1100, hours: 16, local: 1},
+            { source: 7, target: 4, price: 400, hours: 12, local: 1 },
+            { source: 3, target: 5, price: 150, hours: 2, local: 1.5 },
+            { source: 5, target: 3, price: 180, hours: 2, local: 1 },
+            { source: 1, target: 3, price: 260, hours: 3, local: 1 },
+            { source: 1, target: 5, price: 190, hours: 4, local: 1.5 },
+            { source: 1, target: 11, price: 1000, hours: 19, local: 1 },
+            { source: 11, target: 1, price: 1500, hours: 27, local: 1.5 },
+        ];
+
+
+        //fonts and colors
+        const fontFamily = "Assistant";
+        const svgBackgroundColor = "#0a1412"; //#3d405b, //#0e1824 #1d3c34
+        //const color = ["#739dff","#2fe0cb","#C879FF","#f4a261","#e76f51","#a3f7b5","#d264b6","#e9c46a"];
+        const colorloc = ["#70002e", "#1158ff", "#9803ff", "#5f8fff", "#c879ff", "#9ab8ff", "#ED8B00", "#e0b4ff", "\t\n" +
+        "#5aaf99", "#bc9317", "#e7bc3b", "#edce68"];
+        const circleBackground = "#3d405b";
+        const circleOpacity = 0.2;
+        const arcOpacity = 0.2;
+
+        const keys = ["Europe", "South America", "Africa", "Middle East", "Asia" ]
+        const colorCont = ["#5f8fff", "#c879ff", "#ED8B00", "#5aaf99","#e7bc3b"]
+
+
+
+        const drawGraph = function(error) {
+            if (error) throw error;
+
+
+            //size of the container div
+            d3.select("#chart")
+                .style("width", "1000px")
+                .style("height", "200px");
+
+            d3.select("#tool")
+                .style("width", "250px")
+                .style("height", "200px")
+                .style("text-anchor", "right");
+
+            const margin = {top: 100, right: 135, bottom: 300, left: 135},
+                width = 2000 - margin.right - margin.left,
+                height = 2000 - margin.top - margin.bottom;
+
+            //get node names
+            const nodess = d3.map(nodes, function(d,i){return d.names;}).keys();
+            const location = d3.map(nodes, function(d, i) {return d.loc;}).keys();
+            const ap = d3.map(nodes, function(d, i) {return d.airport;}).keys();
+
+
+            //x axis
+            const x = d3.scalePoint()
+                .range([0, width])
+                .domain(nodess);
+
+            //scale thickness of arc lines
+            const lineScale = d3.scaleLinear()
+                .domain([0, 4000])
+                .range([0, 50]);
+
+            const linkedById = {};
+            links.forEach(function(d) {
+                linkedById[d.source + "," + d.target] = 1;
+            });
+
+            //function neighboring(a, b) {
+                //return linkedById[a.source + "," + b.target] || linkedById[b.source + "," + a.id] || a.id == b.id;
+           // }
+
+            const svg = d3.select("#chart")
+                .append('div')
+                .classed('svg-container', true)
+                .append('svg')
+                .style("width", 1000)
+                .style("height", 850)
+                .attr("preserveAspectRatio", "xMinYMin meet")
+                .attr("viewBox", "0 0 1750 1750")
+                .classed('svg-content-responsive', true)
+                .style('background-color', svgBackgroundColor)
+                .append('g')
+                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+            const Tooltip =
+                d3.select("#tool")
+                    .append("div")
+                    .style("opacity", 0)
+                    .attr("class", "tooltip")
+                    .attr("x", 300)
+                    //.classed("hidden", false)
+                    .style("text-anchor", "right")
+                    .style("font-weight", "bold")
+                    .style("background-color", "#ffe6f0")
+                    .style("border", "solid")
+                    .style("border-width", "4px")
+                    .style("border-radius", "4px")
+                    .style("border-color", "#70002e")
+                    .style("padding", "20px")
+
+
+
+            let mouseoverT = function(d, i) {
+                Tooltip
+                    .style("opacity", 1)
+                d3.select(this).transition()
+                    .duration(100)
+                    .attr("opacity", circleOpacity)
+                    .duration(100)
+                    .style("opacity", 0.9)
+
+
+
+                link.style("opacity", function (l) {
+                    if (d === nodess[l.source] ) {
+                        node.style("opacity", function (o) {
+                            if ( nodess[l.target] === nodess[o.source] || nodess[l.target] === nodess[o.source])
+                                return 0.9;
+                            else return circleOpacity;
+                        });
+                        return 0.9;}
+                    else return arcOpacity;
+                })
+
+                //|| d === nodess[l.target]
+            }
+
+            let mousemoveT =  function(d) {
+                //Tooltip
+                    //.style("left", Math.max(0, d3.event.pageX -150) + "px")
+                    //.style("top", d3.event.pageY +20 + "px")
+
+                const mouse = d3.mouse(d3.select(".svg-container").node());
+
+                Tooltip
+                    //.attr("style", "left:" + (mouse[0] + 20) + "px; top:" + (mouse[1] - 50) + "px")
+                    .style("color", '#ff0e71')
+                    .style("font-family", fontFamily)
+                    .html("Location: " + location[nodess.indexOf(d)] + "<br>Airport: "+ ap[nodess.indexOf(d)] + "<br><br><br><br>");
+
+            }
+
+            let mouseleaveT = function(d) {
+                Tooltip
+                    .style("opacity", 0)
+                d3.select(this)//.transition()
+                    //.duration('10')
+                    .attr("opacity", 1)
+                //.duration('10')
+
+                node.style("opacity", circleOpacity);
+                link.style("opacity", arcOpacity);
+            }
+
+            let mouseoverL = function(d, i) {
+                Tooltip
+                    .style("opacity", 1)
+                d3.select(this).transition()
+                    .duration(10)
+                    .attr("opacity", arcOpacity)
+                    .duration(10)
+                    .style("opacity", 0.9)
+            }
+
+
+            let mousemoveL =  function(d) {
+
+
+                const x = d3.event.pageX;
+                const y = d3.event.pageY;
+                Tooltip
+                    //.style("left", x +  "px")
+                    //.style("top", y + "px")
+                    .style("color", '#ff0e71')
+                    .style("font-family", fontFamily)
+                    //.style("display", "inline-block")
+                    .html("From: " + ap[(d.source)] + "<br>To: " + ap[d.target] + "<br>Flight Duration: " + d.hours +" hour(s)" + "<br>Air Fare: $" + d.price + " USD" + "<br>Local Travel Time: " + d.local + " hour(s)" + "<br>Total Travel time: " + (d.hours+d.local) + " hour(s)" + "<br><br>"
+                    )
+
+                //console.log(d3.mouse(this)[0]+100);
+                //console.log(d3.mouse(this)[1]);
+            }
+
+            let mouseleaveL = function(d) {
+                Tooltip
+                    .style("opacity", 0)
+                d3.select(this)
+                    .transition()
+                    //.duration('10')
+                    .attr("opacity", 1)
+                    .style("opacity", arcOpacity)
+                    //.duration('10');
+
+
+            }
+            //create arc first
+            const link = svg
+                .selectAll('links')
+                .data(links)
+                .enter()
+                .append('path')
+                .attr('d', function (d) {
+                    const start = x(nodess[d.source]); // x position of start node
+                    const end = x(nodess[d.target]);   // x position of end node
+                    let arc =  ['M', start, (height/2)-100,'A',(start - end)/2,(start - end)/2, 0, 0,0, end, (height/2)-100].join(' ');
+                    return arc;
+                })
+                .style("fill", "none")
+                .attr("stroke", function(d){
+                    const temp = colorloc[nodess.indexOf(nodess[d.source])];
+                    return temp;})
+                .attr("stroke-width", function(d){
+                    return  lineScale(d.price);})
+                .attr("opacity", arcOpacity)
+                .on("mouseover", mouseoverL)
+                .on('mouseout', mousemoveL)
+                .on("mouseleave", mouseleaveL);
+
+
+            //circles
+            const labels = svg.append("g");
+
+            const node = labels
+                .selectAll("nodes")
+                .data(nodess)
+                .enter()
+                .append("circle")
+                .attr("cx", function(d){return(x(d))})
+                .attr("cy", (height/2)-120)
+                .attr("r", 70)
+                .attr("fill", circleBackground)
+                .attr("stroke", function(d){return colorloc[nodess.indexOf(d)];})
+                .attr("stroke-width", 10)
+                .attr("opacity", circleOpacity)
+                .on("mouseover", mouseoverT)
+                .on('mouseout', mousemoveT)
+                .on("mouseleave", mouseleaveT)
+
+
+
+            svg
+                .selectAll("labels")
+                .data(nodess)
+                .enter()
+                .append("text")
+                .attr("x", function(d){return(x(d))})
+                .attr("y", (height/2)-110)
+                .text(function(d){ const s = d;return(s);})
+                .attr("fill", function(d){return colorloc[nodess.indexOf(d)]})
+                .attr("stroke", function(d){return colorloc[nodess.indexOf(d)]})
+                .style("text-anchor", "middle")
+                .style("font-weight", "bold")
+                .style("font-family", fontFamily)
+                .style("font-size", "1.55em")
+                .on("mouseover", mouseoverT)
+                .on('mouseout', mousemoveT)
+                .on("mouseleave", mouseleaveT)
+
+
+        }
+
+        d3.queue()
+            //.defer(d3.json, "flightdata.json")
+            .await(drawGraph)
+
+        d3.select("#legdiv")
+            .style("width", "1000px")
+            .style("height", "200px")
+            .style('background-color', svgBackgroundColor)
+        const SVG = d3.select("#legend")
+            .style("width", "1000px")
+            .style("height", "200px")
+        const size = 10
+        SVG.selectAll("mydots")
+            .data(keys)
+            .enter()
+            .append("circle")
+            .attr("cx", 800)
+            .attr("cy", function(d,i){ return 20 + i*(size+30)}) // 100 is where the first dot appears. 25 is the distance between dots
+            .attr("r", 8)
+            .attr("fill", circleBackground)
+            .attr("stroke", function(d, i){return colorCont[i];})
+            .attr("stroke-width", 4)
+            .attr("opacity", 0.9)
+
+        // Add one dot in the legend for each name.
+        SVG.selectAll("mylabels")
+            .data(keys)
+            .enter()
+            .append("text")
+            .attr("x", 815)
+            .attr("y", function(d,i){ return 20 + i*(size+30)}) // 100 is where the first dot appears. 25 is the distance between dots
+            .style("fill", function(d, i){ return colorCont[i]})
+            .text(function(d){ return d})
+            .style("font-family", fontFamily)
+            .style("font-size", "1.05em")
+            .style("font-weight", "bold")
+            .attr("text-anchor", "left")
+            .style("alignment-baseline", "middle")
+
+        d3.select("#p1")
+            .style("font-family", fontFamily)
+            .style("font-size", "1.35em")
+            .style("font-weight", "bold")
+            .attr("text-anchor", "left")
+            .style("color", 'white')
+            .style("alignment-baseline", "middle");
+
+        d3.select("#para")
+            .style("font-family", fontFamily)
+            .style("font-size", "0.95em")
+            .style("font-weight", "bold")
+            .attr("text-anchor", "left")
+            .style("color", 'white')
+            .style("alignment-baseline", "middle")
+
+
+    </script>
+</html>
